@@ -1,5 +1,6 @@
 export interface ExperienceItemData {
   company: string;
+  company_icon: string;
   role: string;
   description: string;
   startDate: string;
