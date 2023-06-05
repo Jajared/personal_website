@@ -38,7 +38,7 @@ const App: React.FC = () => {
           <a href="mailto: jajawong09@gmail.com">
             <img src={require("./data/assets/mail-icon.png")} alt="Email" className="w-8 h-8" />
           </a>
-          <a href="data/assets/jared_wong_full_portfolio.pdf">
+          <a href={require("./data/assets/jared_wong_full_portfolio.pdf")} target="_blank">
             <img src={require("./data/assets/portfolio-icon.png")} alt="Email" className="w-8 h-8" />
           </a>
         </div>
