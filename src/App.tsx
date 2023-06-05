@@ -19,7 +19,7 @@ const App: React.FC = () => {
   return (
     <main className="bg-white">
       <Navbar />
-      <section className="flex flex-col px-10 py-10 bg-white slide-in">
+      <section className="box-border flex flex-col px-10 py-10 bg-white slide-in">
         <div className="flex flex-col slide-in">
           <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="100"></img>
           <h1 className="mt-6 mb-6 text-6xl font-extrabold">Hi! I am Jared! 👋</h1>
@@ -38,7 +38,7 @@ const App: React.FC = () => {
           <a href="mailto: jajawong09@gmail.com">
             <img src={require("./data/assets/mail-icon.png")} alt="Email" className="w-8 h-8" />
           </a>
-          <a href="">
+          <a href="data/assets/jared_wong_full_portfolio.pdf">
             <img src={require("./data/assets/portfolio-icon.png")} alt="Email" className="w-8 h-8" />
           </a>
         </div>
@@ -72,7 +72,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="flex flex-col px-10 py-10 bg-slate-50">
+      <section className="box-border flex flex-col px-10 py-10 bg-slate-50">
         <div className="flex items-center mb-6">
           <h1 className="pr-8 text-3xl font-bold"> 👦 About me</h1>
           <div className="mt-2 border-b-2 border-black grow"></div>
