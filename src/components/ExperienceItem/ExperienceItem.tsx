@@ -7,7 +7,7 @@ function ExperienceItem({ data }: { data: ExperienceItemData }) {
 
   const { company, company_icon, role, startDate, endDate, description, tech_stack } = data;
   return (
-    <div className="grid grid-cols-1 gap-4 py-5 rounded-3xl md:grid-cols-3 md:gap-16">
+    <div className="grid grid-cols-1 gap-4 p-6 py-5 rounded-3xl md:grid-cols-3 md:gap-16">
       <div className="col-span-1">
         <img src={require("./scrollshop-icon.png")} alt={company} className="w-12 h-12"></img>
         <h2 className="mt-4 font-semibold max-md:text-2xl">{role}</h2>

@@ -4,7 +4,7 @@ import { ProjectItemData } from "../../utils/types";
 function ProjectItem({ data }: { data: ProjectItemData }) {
   const { title, description, tech_stack } = data;
   return (
-    <div className="grid grid-cols-1 gap-4 py-5 rounded-3xl md:grid-cols-3 md:gap-16">
+    <div className="grid max-w-2xl grid-cols-1 p-6 my-8 mb-20 border shadow-lg bg-slate-50 gap-x-6 gap-y-10 shadow-slate-200 rounded-2xl">
       <div className="col-span-1">
         <h3 className="mt-4 font-semibold max-md:text-2xl">{title}</h3>
       </div>
