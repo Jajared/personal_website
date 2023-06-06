@@ -17,7 +17,7 @@ import VerticalTimelineComponent from "./components/VerticalTimelineComp/Vertica
 
 const App: React.FC = () => {
   return (
-    <main className="max-w-screen-lg px-4 mx-auto bg-white sm:px-6 lg:px-8">
+    <main className="max-w-screen-lg mx-auto bg-white ">
       <Navbar />
       <section className="box-border flex flex-col px-10 py-10 bg-white slide-in">
         <div className="flex flex-col slide-in">

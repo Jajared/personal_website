@@ -9,6 +9,7 @@ import TypescriptIcon from "../../data/assets/typescript-icon.svg";
 import PythonIcon from "../../data/assets/python-icon.svg";
 import MedAlertDesign from "../../data/assets/medalert-design.svg";
 import GithubIcon from "../../data/assets/github-icon.png";
+import MedAlert from "../../data/assets/MedAlert.gif";
 
 function ProjectItem({ data }: { data: ProjectItemData }) {
   const { title, description, tech_stack } = data;
@@ -30,7 +31,7 @@ function ProjectItem({ data }: { data: ProjectItemData }) {
     }
   }
   return (
-    <div className="p-6 my-8 mb-20 border shadow-lg rounded-2xl bg-slate-50 slide-in">
+    <div className="p-6 my-8 mb-20 bg-white border shadow-lg rounded-2xl slide-in">
       <div className="flex justify-end">
         <a href="https://github.com/Jajared/MedAlert" target="_blank">
           <img src={GithubIcon} alt="Github" className="w-6 h-6" />
@@ -38,7 +39,7 @@ function ProjectItem({ data }: { data: ProjectItemData }) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10">
         <div className="flex items-center justify-center">
-          <img src={MedAlertDesign} alt="MedAlertDesign" className="w-8/12 h-8/12" />
+          <img src={MedAlert} alt="MedAlert" className="w-full h-full" />
         </div>
         <div className="flex flex-col justify-center">
           <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
