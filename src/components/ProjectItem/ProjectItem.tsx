@@ -7,12 +7,12 @@ import ReactIcon from "../../data/assets/react-icon.svg";
 import FirebaseIcon from "../../data/assets/firebase-icon.svg";
 import TypescriptIcon from "../../data/assets/typescript-icon.svg";
 import PythonIcon from "../../data/assets/python-icon.svg";
-import MedAlertDesign from "../../data/assets/medalert-design.svg";
 import GithubIcon from "../../data/assets/github-icon.png";
-import MedAlert from "../../data/assets/MedAlert.gif";
+import WordpressIcon from "../../data/assets/wordpress-icon.svg";
+import GASIcon from "../../data/assets/google-apps-script-icon.png";
 
 function ProjectItem({ data }: { data: ProjectItemData }) {
-  const { title, description, tech_stack } = data;
+  const { title, description, tech_stack, projectImage, projectLink } = data;
   function getIcon(tech: string) {
     if (tech === "React" || tech === "React Native") {
       return ReactIcon;
@@ -28,20 +28,24 @@ function ProjectItem({ data }: { data: ProjectItemData }) {
       return TypescriptIcon;
     } else if (tech === "Python") {
       return PythonIcon;
+    } else if (tech === "Wordpress") {
+      return WordpressIcon;
+    } else if (tech === "Google Apps Script") {
+      return GASIcon;
     }
   }
   return (
-    <div className="p-6 my-8 mb-20 bg-white border shadow-lg rounded-2xl slide-in">
+    <div className="p-2 my-8 mb-20 bg-white border shadow-lg rounded-2xl slide-in">
       <div className="flex justify-end">
-        <a href="https://github.com/Jajared/MedAlert" target="_blank">
+        <a href={projectLink} target="_blank">
           <img src={GithubIcon} alt="Github" className="w-6 h-6" />
         </a>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
         <div className="flex items-center justify-center">
-          <img src={MedAlert} alt="MedAlert" className="w-full h-full" />
+          <img src={projectImage} alt="MedAlert" className="w-96 h-96" />
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center p-4">
           <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
           <p className="mb-6">{description}</p>
           <div className="flex items-center">

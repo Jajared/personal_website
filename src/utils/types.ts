@@ -12,4 +12,6 @@ export interface ProjectItemData {
   title: string;
   description: string;
   tech_stack: string[];
+  projectImage: string;
+  projectLink: string;
 }
