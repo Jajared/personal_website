@@ -43,7 +43,7 @@ function ProjectItem({ data }: { data: ProjectItemData }) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5">
         <div className="flex items-center justify-center">
-          <img src={projectImage} alt="MedAlert" className="w-96 h-96" />
+          <img src={projectImage} alt="MedAlert" className="w-full h-full " />
         </div>
         <div className="flex flex-col justify-center p-4">
           <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
