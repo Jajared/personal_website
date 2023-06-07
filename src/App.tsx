@@ -30,19 +30,19 @@ const App: React.FC = () => {
           <p className="">I am a Computer Science student and a passionate full-stack developer based in Singapore 📍🇸🇬 </p>
         </div>
         <div className="flex flex-row items-center mt-4 space-x-6">
-          <a href="https://www.instagram.com/jajabonks/">
+          <a href="https://www.instagram.com/jajabonks/" className="bounce-effect">
             <img src={require("./data/assets/instagram-icon.png")} alt="Instagram" className="w-6 h-6" />
           </a>
-          <a href="https://github.com/Jajared">
+          <a href="https://github.com/Jajared" className="bounce-effect">
             <img src={require("./data/assets/github-icon.png")} alt="Github" className="w-6 h-6" />
           </a>
-          <a href="https://www.linkedin.com/in/jared-wong-4a7a721a4/">
+          <a href="https://www.linkedin.com/in/jared-wong-4a7a721a4/" className="bounce-effect">
             <img src={require("./data/assets/linkedin-icon.png")} alt="LinkedIn" className="w-6 h-6" />
           </a>
-          <a href="mailto: jajawong09@gmail.com">
+          <a href="mailto: jajawong09@gmail.com" className="bounce-effect">
             <img src={require("./data/assets/mail-icon.png")} alt="Email" className="w-6 h-6" />
           </a>
-          <a href={require("./data/assets/jared_wong_full_portfolio.pdf")}>
+          <a href={require("./data/assets/jared_wong_full_portfolio.pdf")} className="bounce-effect">
             <img src={require("./data/assets/portfolio-icon.png")} alt="Email" className="w-6 h-6" />
           </a>
         </div>
@@ -85,7 +85,7 @@ const App: React.FC = () => {
           <div className="mt-2 border-b-2 border-black grow"></div>
         </div>
         <div className="leading-6">
-          <p>I enjoy creating applications that solve real world problems. I have experience working on various projects, from web to mobile applications. Constantly expanding my knowledge and skills, I am eager to explore new technologies and embark on greater heights. I thrive in problem solving and I am driven by the desire to create impactful applications that improve people’s lives.</p>
+          <p>I am a Year 2 Computer Science Student at the National University Of Singapore (NUS). I enjoy creating applications that solve real world problems. I have experience working on various projects, from web to mobile applications. Constantly expanding my knowledge and skills, I am eager to explore new technologies and embark on greater heights. I thrive in problem solving and I am driven by the desire to create impactful applications that improve people’s lives.</p>
         </div>
       </section>
       <section className="flex flex-col px-10 py-10 ">

@@ -2,7 +2,6 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "./VerticalTimeline.css";
 import "./VerticalTimelineElement.css";
 import { ExperienceItemData } from "../../utils/types";
-import ScrollshopIcon from "../../data/assets/scrollshop-icon.png";
 import CSSIcon from "../../data/assets/css-icon.svg";
 import HTMLIcon from "../../data/assets/html-icon.svg";
 import JavascriptIcon from "../../data/assets/javascript-icon.svg";
@@ -32,12 +31,12 @@ function VerticalTimelineComponent({ data }: { data: ExperienceItemData[] }) {
   return (
     <VerticalTimeline lineColor="black">
       {data.map((item: ExperienceItemData, key) => (
-        <VerticalTimelineElement className="vertical-timeline-element--work" contentStyle={{ background: "white", color: "black" }} contentArrowStyle={{ borderRight: "7px solid  black" }} date={`${item.startDate} - ${item.endDate}`} iconStyle={{ background: "white", color: "white" }} icon={<img src={ScrollshopIcon} alt={item.company}></img>}>
+        <VerticalTimelineElement className="vertical-timeline-element--work" contentStyle={{ background: "white", color: "black" }} contentArrowStyle={{ borderRight: "7px solid  black" }} date={`${item.startDate} - ${item.endDate}`} iconStyle={{ background: "white", color: "white" }} icon={<img src={item.company_icon} alt={item.company}></img>}>
           <h3 className="vertical-timeline-element-title">{item.role}</h3>
           <h4 className="vertical-timeline-element-subtitle">{item.company}</h4>
           <p>{item.description}</p>
           <div className="my-4">
-            <h3>Tech Stack</h3>
+            {item.tech_stack.length > 0 ? <h3>Tech Stack</h3> : <div></div>}
             <div className="flex gap-2">
               {item.tech_stack.map((tech, index) => (
                 <div key={index} className="flex items-center justify-center group">

@@ -17,3 +17,23 @@
     opacity: 1;
   }
 }
+
+.bounce-effect img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.bounce-effect img:hover {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
