@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import ProjectItem from "./components/ProjectItem/ProjectItem";
-import { ExperienceItemData, ProjectItemData } from "./utils/types";
+import { ProjectItemData } from "./utils/types";
 import { experienceData } from "./data/experienceData";
 import { projectData } from "./data/projectData";
 import "./App.css";
@@ -13,7 +13,9 @@ import FirebaseIcon from "./data/assets/firebase-icon.svg";
 import PythonIcon from "./data/assets/python-icon.svg";
 import ReactIcon from "./data/assets/react-icon.svg";
 import TypescriptIcon from "./data/assets/typescript-icon.svg";
+import JavaIcon from "./data/assets/java-icon.svg";
 import VerticalTimelineComponent from "./components/VerticalTimelineComp/VerticalTimelineComponent";
+import ProfileImage from "./data/assets/profile-image.jpg";
 
 const App: React.FC = () => {
   return (
@@ -21,25 +23,27 @@ const App: React.FC = () => {
       <Navbar />
       <section className="box-border flex flex-col px-10 py-10 bg-white slide-in">
         <div className="flex flex-col slide-in">
-          <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="100"></img>
+          <div className="w-20 h-20 overflow-hidden rounded-full">
+            <img src={ProfileImage} alt="Profile" className="object-cover w-full h-full" />
+          </div>
           <h1 className="mt-6 mb-6 text-6xl font-extrabold">Hi! I am Jared! 👋</h1>
           <p className="">I am a Computer Science student and a passionate full-stack developer based in Singapore 📍🇸🇬 </p>
         </div>
         <div className="flex flex-row items-center mt-4 space-x-6">
           <a href="https://www.instagram.com/jajabonks/">
-            <img src={require("./data/assets/instagram-icon.png")} alt="Instagram" className="w-8 h-8" />
+            <img src={require("./data/assets/instagram-icon.png")} alt="Instagram" className="w-6 h-6" />
           </a>
           <a href="https://github.com/Jajared">
-            <img src={require("./data/assets/github-icon.png")} alt="Github" className="w-8 h-8" />
+            <img src={require("./data/assets/github-icon.png")} alt="Github" className="w-6 h-6" />
           </a>
           <a href="https://www.linkedin.com/in/jared-wong-4a7a721a4/">
-            <img src={require("./data/assets/linkedin-icon.png")} alt="LinkedIn" className="w-8 h-8" />
+            <img src={require("./data/assets/linkedin-icon.png")} alt="LinkedIn" className="w-6 h-6" />
           </a>
           <a href="mailto: jajawong09@gmail.com">
-            <img src={require("./data/assets/mail-icon.png")} alt="Email" className="w-8 h-8" />
+            <img src={require("./data/assets/mail-icon.png")} alt="Email" className="w-6 h-6" />
           </a>
-          <a href={require("./data/assets/jared_wong_full_portfolio.pdf")} target="_blank">
-            <img src={require("./data/assets/portfolio-icon.png")} alt="Email" className="w-8 h-8" />
+          <a href={require("./data/assets/jared_wong_full_portfolio.pdf")}>
+            <img src={require("./data/assets/portfolio-icon.png")} alt="Email" className="w-6 h-6" />
           </a>
         </div>
         <div className="flex flex-col mt-16">
@@ -47,26 +51,29 @@ const App: React.FC = () => {
           <div className="justify-center block mt-2 ">
             <ul className="flex flex-row mt-2 space-x-4">
               <li>
-                <img src={ReactIcon} title="react-icon" alt="react-icon" className="w-10 h-10"></img>
+                <img src={ReactIcon} title="react-icon" alt="react-icon" className="w-8 h-8"></img>
               </li>
               <li>
-                <img src={TypescriptIcon} title="typescript-icon" alt="typescript-icon" className="w-10 h-10"></img>
+                <img src={TypescriptIcon} title="typescript-icon" alt="typescript-icon" className="w-8 h-8"></img>
               </li>
 
               <li>
-                <img src={JavascriptIcon} title="js-icon" alt="js-icon" className="w-10 h-10"></img>
+                <img src={JavascriptIcon} title="js-icon" alt="js-icon" className="w-8 h-8"></img>
               </li>
               <li>
-                <img src={FirebaseIcon} title="firebase-icon" alt="firebase-icon" className="w-10 h-10"></img>
+                <img src={FirebaseIcon} title="firebase-icon" alt="firebase-icon" className="w-8 h-8"></img>
               </li>
               <li>
-                <img src={CSSIcon} title="css-icon" alt="css-icon" className="w-10 h-10"></img>
+                <img src={CSSIcon} title="css-icon" alt="css-icon" className="w-8 h-8"></img>
               </li>
               <li>
-                <img src={HTMLIcon} title="html-icon" alt="html-icon" className="w-10 h-10"></img>
+                <img src={HTMLIcon} title="html-icon" alt="html-icon" className="w-8 h-8"></img>
               </li>
               <li>
-                <img src={PythonIcon} title="python-icon" alt="python-icon" className="w-10 h-10"></img>
+                <img src={PythonIcon} title="python-icon" alt="python-icon" className="w-8 h-8"></img>
+              </li>
+              <li>
+                <img src={JavaIcon} title="java-icon" alt="java-icon" className="w-8 h-8"></img>
               </li>
             </ul>
           </div>

@@ -1,9 +1,7 @@
 function Navbar() {
   return (
-    <nav className="flex justify-end pr-10">
-      <div>
-        <img src={require("./profile-image.jpg")} alt="Profile" className="mt-2 rounded-full w-14 h-14" />
-      </div>
+    <nav className="flex justify-end pr-10 mt-2">
+      <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" alt="cat-typing" width="70"></img>
     </nav>
   );
 }
