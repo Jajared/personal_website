@@ -10,6 +10,7 @@ import PythonIcon from "../../data/assets/python-icon.svg";
 import GithubIcon from "../../data/assets/github-icon.png";
 import WordpressIcon from "../../data/assets/wordpress-icon.svg";
 import GASIcon from "../../data/assets/google-apps-script-icon.png";
+import Flutter from "../../data/assets/flutter-icon.svg";
 
 function ProjectItem({ data }: { data: ProjectItemData }) {
   const { title, description, tech_stack, projectImage, projectLink } = data;
@@ -32,6 +33,8 @@ function ProjectItem({ data }: { data: ProjectItemData }) {
       return WordpressIcon;
     } else if (tech === "Google Apps Script") {
       return GASIcon;
+    } else if (tech === "Flutter") {
+      return Flutter;
     }
   }
   return (

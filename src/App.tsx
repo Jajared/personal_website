@@ -13,6 +13,7 @@ import FirebaseIcon from "./data/assets/firebase-icon.svg";
 import PythonIcon from "./data/assets/python-icon.svg";
 import ReactIcon from "./data/assets/react-icon.svg";
 import TypescriptIcon from "./data/assets/typescript-icon.svg";
+import FlutterIcon from "./data/assets/flutter-icon.svg";
 import JavaIcon from "./data/assets/java-icon.svg";
 import VerticalTimelineComponent from "./components/VerticalTimelineComp/VerticalTimelineComponent";
 import ProfileImage from "./data/assets/profile-image.jpg";
@@ -52,6 +53,9 @@ const App: React.FC = () => {
             <ul className="flex flex-row mt-2 space-x-4">
               <li>
                 <img src={ReactIcon} title="react-icon" alt="react-icon" className="w-8 h-8"></img>
+              </li>
+              <li>
+                <img src={FlutterIcon} title="flutter-icon" alt="flutter-icon" className="w-8 h-8"></img>
               </li>
               <li>
                 <img src={TypescriptIcon} title="typescript-icon" alt="typescript-icon" className="w-8 h-8"></img>
