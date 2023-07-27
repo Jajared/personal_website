@@ -52,32 +52,76 @@ const App: React.FC = () => {
           <div className="justify-center block mt-2 ">
             <ul className="flex flex-row mt-2 space-x-4">
               <li>
-                <img src={ReactIcon} title="react-icon" alt="react-icon" className="w-8 h-8"></img>
+                <div className="flex items-center justify-center w-8 h-8 group">
+                  <div>
+                    <img src={ReactIcon} title="react-icon" alt="react-icon" className="w-8 h-8"></img>
+                  </div>
+                  <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">React</div>
+                </div>
               </li>
               <li>
-                <img src={FlutterIcon} title="flutter-icon" alt="flutter-icon" className="w-8 h-8"></img>
+                <div className="flex items-center justify-center w-8 h-8 group">
+                  <div>
+                    <img src={FlutterIcon} title="flutter-icon" alt="flutter-icon" className="w-8 h-8"></img>
+                  </div>
+                  <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Flutter</div>
+                </div>
               </li>
               <li>
-                <img src={TypescriptIcon} title="typescript-icon" alt="typescript-icon" className="w-8 h-8"></img>
-              </li>
-
-              <li>
-                <img src={JavascriptIcon} title="js-icon" alt="js-icon" className="w-8 h-8"></img>
-              </li>
-              <li>
-                <img src={FirebaseIcon} title="firebase-icon" alt="firebase-icon" className="w-8 h-8"></img>
+                <div className="flex items-center justify-center w-8 h-8 group">
+                  <div>
+                    <img src={TypescriptIcon} title="typescript-icon" alt="typescript-icon" className="w-8 h-8"></img>
+                  </div>
+                  <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Typescript</div>
+                </div>
               </li>
               <li>
-                <img src={CSSIcon} title="css-icon" alt="css-icon" className="w-8 h-8"></img>
+                <div className="flex items-center justify-center w-8 h-8 group">
+                  <div>
+                    <img src={JavascriptIcon} title="js-icon" alt="js-icon" className="w-8 h-8"></img>
+                  </div>
+                  <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Javascript</div>
+                </div>
               </li>
               <li>
-                <img src={HTMLIcon} title="html-icon" alt="html-icon" className="w-8 h-8"></img>
+                <div className="flex items-center justify-center w-8 h-8 group">
+                  <div>
+                    <img src={FirebaseIcon} title="firebase-icon" alt="firebase-icon" className="w-8 h-8"></img>
+                  </div>
+                  <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Firebase</div>
+                </div>
               </li>
               <li>
-                <img src={PythonIcon} title="python-icon" alt="python-icon" className="w-8 h-8"></img>
+                <div className="flex items-center justify-center w-8 h-8 group">
+                  <div>
+                    <img src={CSSIcon} title="css-icon" alt="css-icon" className="w-8 h-8"></img>
+                  </div>
+                  <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">CSS</div>
+                </div>
               </li>
               <li>
-                <img src={JavaIcon} title="java-icon" alt="java-icon" className="w-8 h-8"></img>
+                <div className="flex items-center justify-center w-8 h-8 group">
+                  <div>
+                    <img src={HTMLIcon} title="html-icon" alt="html-icon" className="w-8 h-8"></img>
+                  </div>
+                  <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">HTML</div>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center justify-center w-8 h-8 group">
+                  <div>
+                    <img src={PythonIcon} title="python-icon" alt="python-icon" className="w-8 h-8"></img>
+                  </div>
+                  <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Python</div>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center justify-center w-8 h-8 group">
+                  <div>
+                    <img src={JavaIcon} title="java-icon" alt="java-icon" className="w-8 h-8"></img>
+                  </div>
+                  <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Java</div>
+                </div>
               </li>
             </ul>
           </div>
