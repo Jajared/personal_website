@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
 import ProjectItem from "./components/ProjectItem/ProjectItem";
 import { ProjectItemData } from "./utils/types";
 import { experienceData } from "./data/experienceData";
 import { projectData } from "./data/projectData";
 import "./App.css";
+import { useState } from "react";
 import CSSIcon from "./data/assets/css-icon.svg";
 import HTMLIcon from "./data/assets/html-icon.svg";
 import JavascriptIcon from "./data/assets/javascript-icon.svg";
@@ -19,10 +19,20 @@ import VerticalTimelineComponent from "./components/VerticalTimelineComp/Vertica
 import ProfileImage from "./data/assets/profile-image.jpg";
 
 const App: React.FC = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const handleToggleMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <main className="max-w-screen-lg mx-auto overflow-x-hidden bg-white">
-      <Navbar />
-      <section className="box-border flex flex-col px-10 py-10 bg-white slide-in">
+    <main className={`transition-all duration-500 max-w-screen-lg mx-auto overflow-x-hidden ${darkMode ? "bg-neutral-900 text-slate-100" : "bg-white text-black"}`}>
+      <div className="flex justify-end px-5 py-5 mb-4">
+        <button onClick={handleToggleMode} className={`rounded-full w-10 h-10 ${darkMode ? "bg-white" : "bg-neutral-900"} text-center leading-10`}>
+          {darkMode ? "🌙" : "☀️"}
+        </button>
+      </div>
+      <section className={`transition-all duration-500 box-border flex flex-col px-10 py-10 slide-in ${darkMode ? "bg-neutral-900 text-slate-100" : "bg-white text-black"}`}>
         <div className="flex flex-col slide-in">
           <div className="w-20 h-20 overflow-hidden rounded-full">
             <img src={ProfileImage} alt="Profile" className="object-cover w-full h-full" />
@@ -35,13 +45,13 @@ const App: React.FC = () => {
             <img src={require("./data/assets/instagram-icon.png")} alt="Instagram" className="w-6 h-6" />
           </a>
           <a href="https://github.com/Jajared" className="bounce-effect">
-            <img src={require("./data/assets/github-icon.png")} alt="Github" className="w-6 h-6" />
+            <img src={require("./data/assets/github-icon.png")} alt="Github" className="w-6 h-6" style={darkMode ? { filter: "invert(1) saturate(100%) brightness(300%)" } : {}} />
           </a>
           <a href="https://www.linkedin.com/in/jared-wong-4a7a721a4/" className="bounce-effect">
             <img src={require("./data/assets/linkedin-icon.png")} alt="LinkedIn" className="w-6 h-6" />
           </a>
           <a href="mailto: jajawong09@gmail.com" className="bounce-effect">
-            <img src={require("./data/assets/mail-icon.png")} alt="Email" className="w-6 h-6" />
+            <img src={require("./data/assets/mail-icon.png")} alt="Email" className="w-6 h-6" style={darkMode ? { filter: "invert(1) saturate(100%) brightness(300%)" } : {}} />
           </a>
           <a href={require("./data/assets/jared_wong_full_portfolio.pdf")} className="bounce-effect">
             <img src={require("./data/assets/portfolio-icon.png")} alt="Email" className="w-6 h-6" />
@@ -129,31 +139,34 @@ const App: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="box-border flex flex-col px-10 py-10 bg-slate-50">
+      <section className={`transition-all duration-500 box-border flex flex-col px-10 py-10 ${darkMode ? "bg-neutral-800 text-slate-100" : "bg-white text-black"}`}>
         <div className="flex items-center mb-6">
           <h1 className="pr-8 text-3xl font-bold"> 👦 About me</h1>
-          <div className="mt-2 border-b-2 border-black grow"></div>
+          <div className={`transition-all duration-500 mt-2 border-b-2 border-black grow ${darkMode ? "border-white" : "border-black"}`}></div>
         </div>
         <div className="leading-6">
           <p>I am a Year 2 Computer Science Student at the National University Of Singapore (NUS). I enjoy creating applications that solve real world problems. I have experience working on various projects, from web to mobile applications. Constantly expanding my knowledge and skills, I am eager to explore new technologies and embark on greater heights. I thrive in problem solving and I am driven by the desire to create impactful applications that improve people’s lives.</p>
         </div>
       </section>
-      <section className="flex flex-col px-10 py-10 ">
+      <section className={`transition-all duration-500 flex flex-col px-10 py-10 ${darkMode ? "bg-neutral-900 text-slate-100" : "bg-white text-black"}`}>
         <div className="flex items-center mb-6 md:mb-12">
-          <h1 className="pr-8 text-3xl font-bold">Experience</h1>
-          <div className="mt-2 border-b-2 border-black grow"></div>
+          <div className="flex items-center mt-6 mb-6">
+            <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" alt="cat-typing" width="40"></img>
+            <h1 className="pl-2 text-3xl font-extrabold">Experience</h1>
+          </div>
+          <div className={`transition-all duration-500 mt-2 ml-6 border-b-2 grow ${darkMode ? "border-white" : "border-black"}`}></div>
         </div>
         <div>
-          <VerticalTimelineComponent data={experienceData} />
+          <VerticalTimelineComponent data={experienceData} isDarkMode={darkMode} />
         </div>
       </section>
-      <section className="flex flex-col px-10 py-10 bg-slate-50">
+      <section className={`transition-all duration-500 flex flex-col px-10 py-10 ${darkMode ? "bg-neutral-800 text-slate-100" : "bg-white text-black"}`}>
         <div className="flex items-center mb-6 md:mb-12">
           <h1 className="pr-8 text-3xl font-bold">Projects</h1>
-          <div className="mt-2 border-b-2 border-black grow"></div>
+          <div className={`transition-all duration-500 mt-2 border-b-2 grow ${darkMode ? "border-white" : "border-black"}`}></div>
         </div>
         {projectData.map((item: ProjectItemData, key) => (
-          <ProjectItem key={key} data={item} />
+          <ProjectItem key={key} data={item} isDarkMode={darkMode} />
         ))}
       </section>
     </main>

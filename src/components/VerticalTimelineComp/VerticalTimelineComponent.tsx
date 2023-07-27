@@ -10,7 +10,7 @@ import FirebaseIcon from "../../data/assets/firebase-icon.svg";
 import TypescriptIcon from "../../data/assets/typescript-icon.svg";
 import PythonIcon from "../../data/assets/python-icon.svg";
 
-function VerticalTimelineComponent({ data }: { data: ExperienceItemData[] }) {
+function VerticalTimelineComponent({ data, isDarkMode }: { data: ExperienceItemData[]; isDarkMode: boolean }) {
   function getIcon(tech: string) {
     if (tech === "React" || tech === "React Native") {
       return ReactIcon;
@@ -29,20 +29,22 @@ function VerticalTimelineComponent({ data }: { data: ExperienceItemData[] }) {
     }
   }
   return (
-    <VerticalTimeline lineColor="black">
+    <VerticalTimeline lineColor={`${isDarkMode ? "white" : "black"}`}>
       {data.map((item: ExperienceItemData, key) => (
-        <VerticalTimelineElement className="vertical-timeline-element--work" contentStyle={{ background: "white", color: "black" }} contentArrowStyle={{ borderRight: "7px solid  black" }} date={`${item.startDate} - ${item.endDate}`} iconStyle={{ background: "white", color: "white" }} icon={<img src={item.company_icon} alt={item.company}></img>}>
-          <h3 className="vertical-timeline-element-title">{item.role}</h3>
-          <h4 className="vertical-timeline-element-subtitle">{item.company}</h4>
-          <p>{item.description}</p>
-          <div className="my-4">
-            {item.tech_stack.length > 0 ? <div className="inline-block px-2 py-1 mb-4 text-sm font-semibold bg-gray-100 rounded-full">Tech Stack</div> : <div></div>}
-            <div className="flex gap-2">
-              {item.tech_stack.map((tech, index) => (
-                <div key={index} className="flex items-center justify-center group">
-                  <img src={getIcon(tech)} alt={tech} className="w-8 h-8 group-hover:animate-bounce" />
-                </div>
-              ))}
+        <VerticalTimelineElement className="vertical-timeline-element--work" contentStyle={isDarkMode ? { background: "#282828", color: "white" } : { background: "white", color: "black" }} contentArrowStyle={isDarkMode ? { borderRight: "7px solid #393939" } : { borderRight: "7px solid  black" }} date={`${item.startDate} - ${item.endDate}`} iconStyle={{ background: "white", color: "white" }} icon={<img src={item.company_icon} alt={item.company}></img>}>
+          <div className={`transition-all duration-500 ${isDarkMode ? "text-slate-100" : "text-black"}`}>
+            <h3 className="vertical-timeline-element-title">{item.role}</h3>
+            <h4 className="vertical-timeline-element-subtitle">{item.company}</h4>
+            <p>{item.description}</p>
+            <div className="my-4">
+              {item.tech_stack.length > 0 ? <div className={`inline-block px-2 py-1 mb-4 text-sm font-semibold bg-gray-100 rounded-full ${isDarkMode ? "bg-neutral-900" : "bg-gray-100 "}`}>Tech Stack</div> : <div></div>}
+              <div className="flex gap-2">
+                {item.tech_stack.map((tech, index) => (
+                  <div key={index} className="flex items-center justify-center group">
+                    <img src={getIcon(tech)} alt={tech} className="w-8 h-8 group-hover:animate-bounce" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </VerticalTimelineElement>

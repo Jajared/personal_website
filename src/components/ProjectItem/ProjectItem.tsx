@@ -12,7 +12,7 @@ import WordpressIcon from "../../data/assets/wordpress-icon.svg";
 import GASIcon from "../../data/assets/google-apps-script-icon.png";
 import Flutter from "../../data/assets/flutter-icon.svg";
 
-function ProjectItem({ data }: { data: ProjectItemData }) {
+function ProjectItem({ data, isDarkMode }: { data: ProjectItemData; isDarkMode: boolean }) {
   const { title, description, tech_stack, projectImage, projectLink } = data;
   function getIcon(tech: string) {
     if (tech === "React" || tech === "React Native") {
@@ -38,9 +38,9 @@ function ProjectItem({ data }: { data: ProjectItemData }) {
     }
   }
   return (
-    <div className="p-2 my-8 mb-20 bg-white border shadow-lg rounded-2xl slide-in">
+    <div className={`p-2 my-8 mb-20 shadow-lg bg-white rounded-2xl slide-in text-black`}>
       <div className="flex justify-end">
-        <a href={projectLink} target="_blank">
+        <a href={projectLink} target="_blank" rel="noreferrer">
           <img src={GithubIcon} alt="Github" className="w-6 h-6" />
         </a>
       </div>
