@@ -38,7 +38,7 @@ function ProjectItem({ data, isDarkMode }: { data: ProjectItemData; isDarkMode: 
     }
   }
   return (
-    <div className={`p-2 my-8 mb-20 shadow-lg bg-white rounded-2xl slide-in text-black`}>
+    <div className={`p-2 my-8 mb-20 shadow-lg bg-white rounded-2xl slide-in text-black xl:mx-32`}>
       <div className="flex justify-end">
         <a href={projectLink} target="_blank" rel="noreferrer">
           <img src={GithubIcon} alt="Github" className="w-6 h-6" />

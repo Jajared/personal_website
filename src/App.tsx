@@ -26,7 +26,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className={`transition-all duration-500 max-w-screen-lg mx-auto overflow-x-hidden ${darkMode ? "bg-neutral-900 text-slate-100" : "bg-white text-black"}`}>
+    <main className={`transition-all duration-500 mx-auto overflow-x-hidden ${darkMode ? "bg-neutral-900 text-slate-100" : "bg-white text-black"}`}>
       <div className="flex justify-end px-5 py-5 mb-4">
         <button onClick={handleToggleMode} className={`rounded-full w-10 h-10 ${darkMode ? "bg-white" : "bg-neutral-900"} text-center leading-10`}>
           {darkMode ? "🌙" : "☀️"}
