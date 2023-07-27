@@ -36,7 +36,7 @@ function VerticalTimelineComponent({ data }: { data: ExperienceItemData[] }) {
           <h4 className="vertical-timeline-element-subtitle">{item.company}</h4>
           <p>{item.description}</p>
           <div className="my-4">
-            {item.tech_stack.length > 0 ? <h3>Tech Stack</h3> : <div></div>}
+            {item.tech_stack.length > 0 ? <div className="inline-block px-2 py-1 mb-4 text-sm font-semibold bg-gray-100 rounded-full">Tech Stack</div> : <div></div>}
             <div className="flex gap-2">
               {item.tech_stack.map((tech, index) => (
                 <div key={index} className="flex items-center justify-center group">
