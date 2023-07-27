@@ -20,7 +20,7 @@ import ProfileImage from "./data/assets/profile-image.jpg";
 
 const App: React.FC = () => {
   return (
-    <main className="max-w-screen-lg mx-auto bg-white ">
+    <main className="max-w-screen-lg mx-auto overflow-x-hidden bg-white">
       <Navbar />
       <section className="box-border flex flex-col px-10 py-10 bg-white slide-in">
         <div className="flex flex-col slide-in">
@@ -47,10 +47,10 @@ const App: React.FC = () => {
             <img src={require("./data/assets/portfolio-icon.png")} alt="Email" className="w-6 h-6" />
           </a>
         </div>
-        <div className="flex flex-col mt-16">
+        <div className="flex flex-col mt-16 ">
           <p className="font-bold underline">Tech stack</p>
           <div className="justify-center block mt-2 ">
-            <div className="overflow-x-auto">
+            <div className="justify-center block max-w-screen-lg mt-2 overflow-x-auto">
               <ul className="flex flex-row mt-2 space-x-4">
                 <li>
                   <div className="flex items-center justify-center w-8 h-8 group">
