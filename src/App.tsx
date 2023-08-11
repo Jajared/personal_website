@@ -53,7 +53,7 @@ const App: React.FC = () => {
           <a href="mailto: jajawong09@gmail.com" className="bounce-effect">
             <img src={require("./data/assets/mail-icon.png")} alt="Email" className="w-6 h-6" style={darkMode ? { filter: "invert(1) saturate(100%) brightness(300%)" } : {}} />
           </a>
-          <a href={require("./data/assets/jared_wong_full_portfolio.pdf")} className="bounce-effect">
+          <a href={require("./data/assets/portfolio.pdf")} className="bounce-effect">
             <img src={require("./data/assets/portfolio-icon.png")} alt="Email" className="w-6 h-6" />
           </a>
         </div>

@@ -50,7 +50,14 @@ function ProjectItem({ data, isDarkMode }: { data: ProjectItemData; isDarkMode: 
         </div>
         <div className="flex flex-col justify-center p-4">
           <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
-          <p className="mb-6">{description}</p>
+          <p className="mb-6">
+            {description.split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}
+          </p>
           <div className="flex items-center">
             <div className="flex gap-2">
               {tech_stack.map((tech, index) => (
