@@ -9,6 +9,9 @@ import ReactIcon from "../../data/assets/react-icon.svg";
 import FirebaseIcon from "../../data/assets/firebase-icon.svg";
 import TypescriptIcon from "../../data/assets/typescript-icon.svg";
 import PythonIcon from "../../data/assets/python-icon.svg";
+import NestJSIcon from "../../data/assets/nestjs-icon.png";
+import NextJSIcon from "../../data/assets/nextjs-icon.svg";
+import PostgresqlIcon from "../../data/assets/postgresql-icon.png";
 
 function VerticalTimelineComponent({ data, isDarkMode }: { data: ExperienceItemData[]; isDarkMode: boolean }) {
   function getIcon(tech: string) {
@@ -26,6 +29,12 @@ function VerticalTimelineComponent({ data, isDarkMode }: { data: ExperienceItemD
       return TypescriptIcon;
     } else if (tech === "Python") {
       return PythonIcon;
+    } else if (tech === "NestJS") {
+      return NestJSIcon;
+    } else if (tech === "NextJS") {
+      return NextJSIcon;
+    } else if (tech === "PostgreSQL") {
+      return PostgresqlIcon;
     }
   }
   return (

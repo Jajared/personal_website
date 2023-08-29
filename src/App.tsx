@@ -15,6 +15,9 @@ import ReactIcon from "./data/assets/react-icon.svg";
 import TypescriptIcon from "./data/assets/typescript-icon.svg";
 import FlutterIcon from "./data/assets/flutter-icon.svg";
 import JavaIcon from "./data/assets/java-icon.svg";
+import PostgresqlIcon from "./data/assets/postgresql-icon.png";
+import NextJSIcon from "./data/assets/nextjs-icon.svg";
+import NestJSIcon from "./data/assets/nestjs-icon.png";
 import VerticalTimelineComponent from "./components/VerticalTimelineComp/VerticalTimelineComponent";
 import ProfileImage from "./data/assets/profile-image.jpg";
 
@@ -53,7 +56,7 @@ const App: React.FC = () => {
           <a href="mailto: jajawong09@gmail.com" className="bounce-effect">
             <img src={require("./data/assets/mail-icon.png")} alt="Email" className="w-6 h-6" style={darkMode ? { filter: "invert(1) saturate(100%) brightness(300%)" } : {}} />
           </a>
-          <a href={require("./data/assets/portfolio.pdf")} className="bounce-effect">
+          <a href={require("./data/assets/portfolio-jared-wong.pdf")} className="bounce-effect">
             <img src={require("./data/assets/portfolio-icon.png")} alt="Email" className="w-6 h-6" />
           </a>
         </div>
