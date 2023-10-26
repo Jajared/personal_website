@@ -37,7 +37,7 @@ const App: React.FC = () => {
       </div>
       <section className={`transition-all duration-500 box-border flex flex-col px-10 py-10 slide-in ${darkMode ? "bg-neutral-900 text-slate-100" : "bg-white text-black"}`}>
         <div className="flex flex-col slide-in">
-          <div className="w-20 h-20 overflow-hidden rounded-full">
+          <div className="w-40 h-40 overflow-hidden rounded-full">
             <img src={ProfileImage} alt="Profile" className="object-cover w-full h-full" />
           </div>
           <h1 className="mt-6 mb-6 text-6xl font-extrabold">Hi! I am Jared! 👋</h1>
