@@ -2,16 +2,16 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "./VerticalTimeline.css";
 import "./VerticalTimelineElement.css";
 import { ExperienceItemData } from "../../utils/types";
-import CSSIcon from "../../data/assets/css-icon.svg";
-import HTMLIcon from "../../data/assets/html-icon.svg";
-import JavascriptIcon from "../../data/assets/javascript-icon.svg";
-import ReactIcon from "../../data/assets/react-icon.svg";
-import FirebaseIcon from "../../data/assets/firebase-icon.svg";
-import TypescriptIcon from "../../data/assets/typescript-icon.svg";
-import PythonIcon from "../../data/assets/python-icon.svg";
-import NestJSIcon from "../../data/assets/nestjs-icon.png";
-import NextJSIcon from "../../data/assets/nextjs-icon.svg";
-import PostgresqlIcon from "../../data/assets/postgresql-icon.png";
+import CSSIcon from "../../data/assets/icons/css-icon.svg";
+import HTMLIcon from "../../data/assets/icons/html-icon.svg";
+import JavascriptIcon from "../../data/assets/icons/javascript-icon.svg";
+import ReactIcon from "../../data/assets/icons/react-icon.svg";
+import FirebaseIcon from "../../data/assets/icons/firebase-icon.svg";
+import TypescriptIcon from "../../data/assets/icons/typescript-icon.svg";
+import PythonIcon from "../../data/assets/icons/python-icon.svg";
+import NestJSIcon from "../../data/assets/icons/nestjs-icon.png";
+import NextJSIcon from "../../data/assets/icons/nextjs-icon.svg";
+import PostgresqlIcon from "../../data/assets/icons/postgresql-icon.png";
 
 function VerticalTimelineComponent({ data, isDarkMode }: { data: ExperienceItemData[]; isDarkMode: boolean }) {
   function getIcon(tech: string) {

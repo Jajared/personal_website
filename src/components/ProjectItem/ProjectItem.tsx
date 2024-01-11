@@ -1,16 +1,16 @@
 import React from "react";
 import { ProjectItemData } from "../../utils/types";
-import CSSIcon from "../../data/assets/css-icon.svg";
-import HTMLIcon from "../../data/assets/html-icon.svg";
-import JavascriptIcon from "../../data/assets/javascript-icon.svg";
-import ReactIcon from "../../data/assets/react-icon.svg";
-import FirebaseIcon from "../../data/assets/firebase-icon.svg";
-import TypescriptIcon from "../../data/assets/typescript-icon.svg";
-import PythonIcon from "../../data/assets/python-icon.svg";
-import GithubIcon from "../../data/assets/github-icon.png";
-import WordpressIcon from "../../data/assets/wordpress-icon.svg";
-import GASIcon from "../../data/assets/google-apps-script-icon.png";
-import Flutter from "../../data/assets/flutter-icon.svg";
+import CSSIcon from "../../data/assets/icons/css-icon.svg";
+import HTMLIcon from "../../data/assets/icons/html-icon.svg";
+import JavascriptIcon from "../../data/assets/icons/javascript-icon.svg";
+import ReactIcon from "../../data/assets/icons/react-icon.svg";
+import FirebaseIcon from "../../data/assets/icons/firebase-icon.svg";
+import TypescriptIcon from "../../data/assets/icons/typescript-icon.svg";
+import PythonIcon from "../../data/assets/icons/python-icon.svg";
+import GithubIcon from "../../data/assets/icons/github-icon.png";
+import WordpressIcon from "../../data/assets/icons/wordpress-icon.svg";
+import GASIcon from "../../data/assets/icons/google-apps-script-icon.png";
+import Flutter from "../../data/assets/icons/flutter-icon.svg";
 
 function ProjectItem({ data, isDarkMode }: { data: ProjectItemData; isDarkMode: boolean }) {
   const { title, description, tech_stack, projectImage, projectLink } = data;

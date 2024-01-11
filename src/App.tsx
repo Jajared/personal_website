@@ -6,18 +6,18 @@ import { experienceData } from "./data/experienceData";
 import { projectData } from "./data/projectData";
 import "./App.css";
 import { useState } from "react";
-import CSSIcon from "./data/assets/css-icon.svg";
-import HTMLIcon from "./data/assets/html-icon.svg";
-import JavascriptIcon from "./data/assets/javascript-icon.svg";
-import FirebaseIcon from "./data/assets/firebase-icon.svg";
-import PythonIcon from "./data/assets/python-icon.svg";
-import ReactIcon from "./data/assets/react-icon.svg";
-import TypescriptIcon from "./data/assets/typescript-icon.svg";
-import FlutterIcon from "./data/assets/flutter-icon.svg";
-import JavaIcon from "./data/assets/java-icon.svg";
+import CSSIcon from "./data/assets/icons/css-icon.svg";
+import HTMLIcon from "./data/assets/icons/html-icon.svg";
+import JavascriptIcon from "./data/assets/icons/javascript-icon.svg";
+import FirebaseIcon from "./data/assets/icons/firebase-icon.svg";
+import PythonIcon from "./data/assets/icons/python-icon.svg";
+import ReactIcon from "./data/assets/icons/react-icon.svg";
+import TypescriptIcon from "./data/assets/icons/typescript-icon.svg";
+import FlutterIcon from "./data/assets/icons/flutter-icon.svg";
+import JavaIcon from "./data/assets/icons/java-icon.svg";
 import PostgresqlIcon from "./data/assets/postgresql-icon.png";
-import NextJSIcon from "./data/assets/nextjs-icon.svg";
-import NestJSIcon from "./data/assets/nestjs-icon.png";
+import NextJSIcon from "./data/assets/icons/nextjs-icon.svg";
+import NestJSIcon from "./data/assets/icons/nestjs-icon.png";
 import VerticalTimelineComponent from "./components/VerticalTimelineComp/VerticalTimelineComponent";
 import ProfileImage from "./data/assets/profile-image.jpg";
 
@@ -45,19 +45,19 @@ const App: React.FC = () => {
         </div>
         <div className="flex flex-row items-center mt-4 space-x-6">
           <a href="https://www.instagram.com/jajabonks/" className="bounce-effect">
-            <img src={require("./data/assets/instagram-icon.png")} alt="Instagram" className="w-6 h-6" />
+            <img src={require("./data/assets/icons/instagram-icon.png")} alt="Instagram" className="w-6 h-6" />
           </a>
           <a href="https://github.com/Jajared" className="bounce-effect">
-            <img src={require("./data/assets/github-icon.png")} alt="Github" className="w-6 h-6" style={darkMode ? { filter: "invert(1) saturate(100%) brightness(300%)" } : {}} />
+            <img src={require("./data/assets/icons/github-icon.png")} alt="Github" className="w-6 h-6" style={darkMode ? { filter: "invert(1) saturate(100%) brightness(300%)" } : {}} />
           </a>
           <a href="https://www.linkedin.com/in/jared-wong-4a7a721a4/" className="bounce-effect">
-            <img src={require("./data/assets/linkedin-icon.png")} alt="LinkedIn" className="w-6 h-6" />
+            <img src={require("./data/assets/icons/linkedin-icon.png")} alt="LinkedIn" className="w-6 h-6" />
           </a>
           <a href="mailto: jajawong09@gmail.com" className="bounce-effect">
-            <img src={require("./data/assets/mail-icon.png")} alt="Email" className="w-6 h-6" style={darkMode ? { filter: "invert(1) saturate(100%) brightness(300%)" } : {}} />
+            <img src={require("./data/assets/icons/mail-icon.png")} alt="Email" className="w-6 h-6" style={darkMode ? { filter: "invert(1) saturate(100%) brightness(300%)" } : {}} />
           </a>
           <a href={require("./data/assets/portfolio-jared-wong.pdf")} className="bounce-effect">
-            <img src={require("./data/assets/portfolio-icon.png")} alt="Email" className="w-6 h-6" />
+            <img src={require("./data/assets/icons/portfolio-icon.png")} alt="Email" className="w-6 h-6" />
           </a>
         </div>
         <div className="flex flex-col mt-10 ">
@@ -148,7 +148,7 @@ const App: React.FC = () => {
           <div className={`transition-all duration-500 mt-2 border-b-2 border-black grow ${darkMode ? "border-white" : "border-black"}`}></div>
         </div>
         <div className="leading-6">
-          <p>I am a Year 2 Computer Science Student at the National University Of Singapore (NUS). I enjoy creating applications that solve real world problems. I have experience working on various projects, from web to mobile applications. Constantly expanding my knowledge and skills, I am eager to explore new technologies and embark on greater heights. I thrive in problem solving and I am driven by the desire to create impactful applications that improve people’s lives.</p>
+          <p>I am a Year 2 Computer Science Student specialising in Software Engineering and Database Systems at the National University Of Singapore (NUS). I thrive on challenges and enjoy the process of transforming complex problems into solutions that can solve real-world problems and bring about substantial positive change. I have experience working on various projects, from web to mobile applications. My background in developing full-stack applications has equipped me with a versatile skill set, enabling me to contribute effectively to both front-end and back-end development. Constantly expanding my knowledge and skills, I am eager to explore new technologies and embark on greater heights.</p>
         </div>
       </section>
       <section className={`transition-all duration-500 flex flex-col px-10 py-10 ${darkMode ? "bg-neutral-900 text-slate-100" : "bg-white text-black"}`}>

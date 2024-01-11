@@ -1,10 +1,12 @@
 import { ProjectItemData } from "../utils/types";
-import MedAlert from "./assets/MedAlert.gif";
+import MedAlert from "./assets/gifs/MedAlert.gif";
 import Connectlab from "./assets/connectlab_website.png";
 import paradeStateBot from "./assets/parade_state_bot.svg";
-import FinanceTracker from "./assets/finance-tracker.gif";
+import FinanceTracker from "./assets/gifs/finance-tracker.gif";
+import HappyLungs from "./assets/gifs/HappyLungs.gif";
 
 export const projectData: ProjectItemData[] = [
+  { title: "HappyLungs", description: "HappyLungs is a mobile application developed in collaboration with NUS School of Computing Health Informatics Lab and local health organisations. The app aims to encourage users to quit smoking by providing a platform for users to track their cigarette consumption. The key features of our app include having a AI-trained chatbot for users to ask smoking-related queries, a nominee system where nominees can be selected to track user consumption as well as descriptive analysis of cigarettes consumption.", tech_stack: ["React Native", "Typescript", "Javascript", "Firebase"], projectImage: HappyLungs, projectLink: "" },
   { title: "MedAlert", description: "MedAlert is a mobile app that offers a simple and intuitive solution for individuals to manage their medication schedules efficiently, allowing users to set up personalised reminders for their medication needs. Our goal is to make consuming medication a less tedious and confusing process, especially for those with chronic illnesses.", tech_stack: ["React Native", "Typescript", "Javascript", "Firebase"], projectImage: MedAlert, projectLink: "https://github.com/Jajared/MedAlert" },
   { title: "Financio", description: "Financio is a simple personal finance app that helps you manage and monitor your spending and investment activities in one app. Easily track your investment activities and daily expenses! Additionally, stay informed about your investments' performance, spending habits and get insights to make informed decisions for a secure financial future.", tech_stack: ["Flutter", "Firebase"], projectImage: FinanceTracker, projectLink: "https://github.com/Jajared/FinanceTracker" },
   { title: "Business Website for SME", description: "First ventured into web development by designing a business website. Connectlab Pte. Ltd. is a Singapore-based SME that specialises in the distribution of cabling products.", tech_stack: ["Wordpress"], projectImage: Connectlab, projectLink: "https://www.connectlab.com.sg/" },
