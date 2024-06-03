@@ -55,10 +55,10 @@
 
 .vertical-timeline-element-icon img {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   position: relative;
-  left: 50%;
+  left: 45%;
   top: 50%;
   margin-left: -12px;
   margin-top: -12px;

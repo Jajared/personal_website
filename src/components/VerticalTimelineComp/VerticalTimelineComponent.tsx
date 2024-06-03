@@ -12,29 +12,35 @@ import PythonIcon from "../../data/assets/icons/python-icon.svg";
 import NestJSIcon from "../../data/assets/icons/nestjs-icon.png";
 import NextJSIcon from "../../data/assets/icons/nextjs-icon.svg";
 import PostgresqlIcon from "../../data/assets/icons/postgresql-icon.png";
+import PrismaIcon from "../../data/assets/icons/prisma-icon.png";
 
 function VerticalTimelineComponent({ data, isDarkMode }: { data: ExperienceItemData[]; isDarkMode: boolean }) {
   function getIcon(tech: string) {
-    if (tech === "React" || tech === "React Native") {
-      return ReactIcon;
-    } else if (tech === "CSS") {
-      return CSSIcon;
-    } else if (tech === "HTML") {
-      return HTMLIcon;
-    } else if (tech === "Javascript") {
-      return JavascriptIcon;
-    } else if (tech === "Firebase") {
-      return FirebaseIcon;
-    } else if (tech === "Typescript") {
-      return TypescriptIcon;
-    } else if (tech === "Python") {
-      return PythonIcon;
-    } else if (tech === "NestJS") {
-      return NestJSIcon;
-    } else if (tech === "NextJS") {
-      return NextJSIcon;
-    } else if (tech === "PostgreSQL") {
-      return PostgresqlIcon;
+    switch (tech) {
+      case "React":
+        return ReactIcon;
+      case "React Native":
+        return ReactIcon;
+      case "CSS":
+        return CSSIcon;
+      case "HTML":
+        return HTMLIcon;
+      case "Javascript":
+        return JavascriptIcon;
+      case "Firebase":
+        return FirebaseIcon;
+      case "Typescript":
+        return TypescriptIcon;
+      case "Python":
+        return PythonIcon;
+      case "NestJS":
+        return NestJSIcon;
+      case "NextJS":
+        return NextJSIcon;
+      case "PostgreSQL":
+        return PostgresqlIcon;
+      case "Prisma":
+        return PrismaIcon;
     }
   }
   return (
