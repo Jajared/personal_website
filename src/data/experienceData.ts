@@ -1,13 +1,14 @@
 import { ExperienceItemData } from "../utils/types";
 import ScrollshopLogo from "./assets/logos/scrollshop-logo.png";
-import MindefLogo from "./assets/logos/mindef-logo.png";
 import GDSCLogo from "./assets/logos/gdsc-logo.jpeg";
 import NUSLogo from "./assets/logos/nus-logo.jpeg";
 import VisionPalLogo from "./assets/logos/visionpal-logo.png";
 import HolicayLogo from "./assets/logos/holicay-logo.svg";
+import PintsaiLogo from "./assets/logos/pintsai-logo.jpeg";
 
 export const experienceData: ExperienceItemData[] = [
-  { company: "Holicay", company_icon: HolicayLogo, role: "Software Engineer Intern", startDate: "May 2024", endDate: "Present", description: "We help users to build DIY Trips using templates made by other travelers and AI", tech_stack: ["React", "Typescript", "NextJS"] },
+  { company: "Pints.ai", company_icon: PintsaiLogo, role: "Software Engineer Intern", startDate: "Oct 2024", endDate: "Present", description: "Pints.ai specialises in delivering AI-powered platforms, bespoke consulting services and cutting-edge research that empower financial enterprises to achieve unparalleled efficiency, accuracy, and growth", tech_stack: ["React", "Typescript"] }, 
+  { company: "Holicay", company_icon: HolicayLogo, role: "Software Engineer Intern", startDate: "May 2024", endDate: "Aug 2024", description: "Holicay helps users to build DIY Trips using templates made by other travelers and AI", tech_stack: ["React", "Typescript", "NextJS"] },
   { company: "VisionPal", company_icon: VisionPalLogo, role: "Software Engineer Intern", startDate: "Dec 2023", endDate: "May 2024", description: "VisionPal aims to transform the eye healthcare scene by making preventative eye care, eye health management and treatments conveniently accessible for users. VisionPal is a one of a kind company within the optometry and eye health industry which provides eye health and prescriptive screenings on the go.", tech_stack: ["React Native", "Javascript"] },
   { company: "Healthcare Informatics, NUS School of Computing", company_icon: NUSLogo, role: "Research Engineer (Full-Stack Development)", startDate: "Aug 2023", endDate: "May 2024", description: "Working alongside the local Healthcare sector, we aim to build applications designed towards more effective management of individual health.", tech_stack: ["React", "Javascript", "Typescript", "Firebase"] },
   { company: "Google Developer Student Club NUS", company_icon: GDSCLogo, role: "Full-Stack Developer", startDate: "Aug 2023", endDate: "Present", description: "Pushing the mission of #TechForGood, GDSC NUS aims to make a difference in society by developing software solutions for Non-Profit Organisations.", tech_stack: ["NextJS", "NestJS", "PostgreSQL", "Prisma"] },

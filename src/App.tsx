@@ -15,9 +15,6 @@ import ReactIcon from "./data/assets/icons/react-icon.svg";
 import TypescriptIcon from "./data/assets/icons/typescript-icon.svg";
 import FlutterIcon from "./data/assets/icons/flutter-icon.svg";
 import JavaIcon from "./data/assets/icons/java-icon.svg";
-import PostgresqlIcon from "./data/assets/postgresql-icon.png";
-import NextJSIcon from "./data/assets/icons/nextjs-icon.svg";
-import NestJSIcon from "./data/assets/icons/nestjs-icon.png";
 import VerticalTimelineComponent from "./components/VerticalTimelineComp/VerticalTimelineComponent";
 import ProfileImage from "./data/assets/profile-image.jpg";
 
@@ -148,7 +145,7 @@ const App: React.FC = () => {
           <div className={`transition-all duration-500 mt-2 border-b-2 border-black grow ${darkMode ? "border-white" : "border-black"}`}></div>
         </div>
         <div className="leading-6">
-          <p>I am a Year 2 Computer Science Student specialising in Software Engineering and Database Systems at the National University Of Singapore (NUS). I thrive on challenges and enjoy the process of transforming complex problems into solutions that can solve real-world problems and bring about substantial positive change. I have experience working on various projects, from web to mobile applications. My background in developing full-stack applications has equipped me with a versatile skill set, enabling me to contribute effectively to both front-end and back-end development. Constantly expanding my knowledge and skills, I am eager to explore new technologies and embark on greater heights.</p>
+          <p>I am a Year 3 Computer Science Student specialising in Software Engineering and Database Systems at the National University Of Singapore (NUS). I thrive on challenges and enjoy the process of transforming complex problems into solutions that can solve real-world problems and bring about substantial positive change. I have experience working on various projects, from web to mobile applications. My background in developing full-stack applications has equipped me with a versatile skill set, enabling me to contribute effectively to both front-end and back-end development. Constantly expanding my knowledge and skills, I am eager to explore new technologies and embark on greater heights.</p>
         </div>
       </section>
       <section className={`transition-all duration-500 flex flex-col px-10 py-10 ${darkMode ? "bg-neutral-900 text-slate-100" : "bg-white text-black"}`}>
