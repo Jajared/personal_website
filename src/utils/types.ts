@@ -5,13 +5,14 @@ export interface ExperienceItemData {
   description: string;
   startDate: string;
   endDate: string;
-  tech_stack: string[];
+  techStack: React.FC[];
 }
 
 export interface ProjectItemData {
   title: string;
   description: string;
-  tech_stack: string[];
+  techStack: React.FC[];
+  year: number;
   projectImage: string;
   projectLink: string;
 }

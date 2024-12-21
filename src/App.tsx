@@ -6,17 +6,20 @@ import { experienceData } from "./data/experienceData";
 import { projectData } from "./data/projectData";
 import "./App.css";
 import { useState } from "react";
-import CSSIcon from "./data/assets/icons/css-icon.svg";
-import HTMLIcon from "./data/assets/icons/html-icon.svg";
-import JavascriptIcon from "./data/assets/icons/javascript-icon.svg";
-import FirebaseIcon from "./data/assets/icons/firebase-icon.svg";
-import PythonIcon from "./data/assets/icons/python-icon.svg";
-import ReactIcon from "./data/assets/icons/react-icon.svg";
-import TypescriptIcon from "./data/assets/icons/typescript-icon.svg";
-import FlutterIcon from "./data/assets/icons/flutter-icon.svg";
-import JavaIcon from "./data/assets/icons/java-icon.svg";
 import VerticalTimelineComponent from "./components/VerticalTimelineComp/VerticalTimelineComponent";
 import ProfileImage from "./data/assets/profile-image.jpg";
+import { CssIcon, FirebaseIcon, HtmlIcon, JavascriptIcon, PythonIcon, ReactIcon, TypescriptIcon } from "./components/DevIcons";
+
+const IconWithTooltip = ({ Icon, text }: { Icon: React.FC; text: string }) => {
+  return (
+    <div className="relative">
+      <div className="flex items-center justify-center w-8 h-8 group">
+        <Icon />
+        <div className="absolute mt-[72px] opacity-0 text-xs font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">{text}</div>
+      </div>
+    </div>
+  );
+};
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -63,76 +66,35 @@ const App: React.FC = () => {
             <div className="justify-center block max-w-screen-lg mt-2 overflow-x-auto overflow-y-hidden">
               <ul className="flex flex-row h-16 px-1 mt-2 space-x-4">
                 <li className="relative">
-                  <div className="flex items-center justify-center w-8 h-8 group">
-                    <div>
-                      <img src={ReactIcon} title="react-icon" alt="react-icon" className="w-8 h-8"></img>
-                    </div>
-                    <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">React</div>
-                  </div>
+                  <IconWithTooltip Icon={ReactIcon} text="React" />
+                </li>
+                <li className="relative">
+                  <IconWithTooltip Icon={ReactIcon} text="React Native" />
+                </li>
+                <li className="relative">
+                  <IconWithTooltip Icon={TypescriptIcon} text="Typescript" />
                 </li>
                 <li className="relative">
                   <div className="flex items-center justify-center w-8 h-8 group">
-                    <div>
-                      <img src={FlutterIcon} title="flutter-icon" alt="flutter-icon" className="w-8 h-8"></img>
-                    </div>
-                    <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Flutter</div>
+                    <IconWithTooltip Icon={JavascriptIcon} text="Javascript" />
                   </div>
                 </li>
                 <li className="relative">
-                  <div className="flex items-center justify-center w-8 h-8 group">
-                    <div>
-                      <img src={TypescriptIcon} title="typescript-icon" alt="typescript-icon" className="w-8 h-8"></img>
-                    </div>
-                    <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Typescript</div>
-                  </div>
+                  <IconWithTooltip Icon={FirebaseIcon} text="Firebase" />
                 </li>
                 <li className="relative">
                   <div className="flex items-center justify-center w-8 h-8 group">
-                    <div>
-                      <img src={JavascriptIcon} title="js-icon" alt="js-icon" className="w-8 h-8"></img>
-                    </div>
-                    <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Javascript</div>
+                    <IconWithTooltip Icon={HtmlIcon} text="HTML" />
                   </div>
                 </li>
                 <li className="relative">
-                  <div className="flex items-center justify-center w-8 h-8 group">
-                    <div>
-                      <img src={FirebaseIcon} title="firebase-icon" alt="firebase-icon" className="w-8 h-8"></img>
-                    </div>
-                    <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Firebase</div>
-                  </div>
+                  <IconWithTooltip Icon={CssIcon} text="CSS" />
                 </li>
                 <li className="relative">
-                  <div className="flex items-center justify-center w-8 h-8 group">
-                    <div>
-                      <img src={CSSIcon} title="css-icon" alt="css-icon" className="w-8 h-8"></img>
-                    </div>
-                    <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">CSS</div>
-                  </div>
+                  <IconWithTooltip Icon={PythonIcon} text="Python" />
                 </li>
                 <li className="relative">
-                  <div className="flex items-center justify-center w-8 h-8 group">
-                    <div>
-                      <img src={HTMLIcon} title="html-icon" alt="html-icon" className="w-8 h-8"></img>
-                    </div>
-                    <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">HTML</div>
-                  </div>
-                </li>
-                <li className="relative">
-                  <div className="flex items-center justify-center w-8 h-8 group">
-                    <div>
-                      <img src={PythonIcon} title="python-icon" alt="python-icon" className="w-8 h-8"></img>
-                    </div>
-                    <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Python</div>
-                  </div>
-                </li>
-                <li className="relative">
-                  <div className="flex items-center justify-center w-8 h-8 group">
-                    <div>
-                      <img src={JavaIcon} title="java-icon" alt="java-icon" className="w-8 h-8"></img>
-                    </div>
-                    <div className="absolute mt-[72px] opacity-0 text-sm font-medium text-gray-500 transition-opacity duration-150 group-hover:opacity-100">Java</div>
-                  </div>
+                  <IconWithTooltip Icon={ReactIcon} text="Java" />
                 </li>
               </ul>
             </div>
