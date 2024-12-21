@@ -2,8 +2,10 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "./VerticalTimeline.css";
 import "./VerticalTimelineElement.css";
 import { ExperienceItemData } from "../../utils/types";
+import { useDarkModeContext } from "../../hooks/useDarkMode";
 
-function VerticalTimelineComponent({ data, isDarkMode }: { data: ExperienceItemData[]; isDarkMode: boolean }) {
+function VerticalTimelineComponent({ data }: { data: ExperienceItemData[] }) {
+  const { isDarkMode } = useDarkModeContext();
   return (
     <VerticalTimeline lineColor={`${isDarkMode ? "white" : "black"}`}>
       {data.map((item: ExperienceItemData, key) => (

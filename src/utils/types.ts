@@ -16,3 +16,8 @@ export interface ProjectItemData {
   projectImage: string;
   projectLink: string;
 }
+
+export interface TechStackItemData {
+  name: string;
+  Icon: React.FC;
+}

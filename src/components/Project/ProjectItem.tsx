@@ -2,7 +2,7 @@ import React from "react";
 import { ProjectItemData } from "../../utils/types";
 import { GithubIcon } from "../DevIcons";
 
-function ProjectItem({ data, isDarkMode }: { data: ProjectItemData; isDarkMode: boolean }) {
+function ProjectItem({ data }: { data: ProjectItemData }) {
   const { title, description, techStack, projectImage, projectLink } = data;
 
   return (
