@@ -155,6 +155,10 @@
   box-shadow: 0 3px 0 #ddd;
 }
 
+.dark .vertical-timeline-element-content {
+  box-shadow: 0 3px 0 #444;
+}
+
 .vertical-timeline--one-column-right .vertical-timeline-element-content {
   margin-right: 60px;
   margin-left: unset;
@@ -176,7 +180,6 @@
 .vertical-timeline-element-content .vertical-timeline-element-date {
   font-size: 13px;
   font-size: 0.8125rem;
-  font-weight: 500;
 }
 .vertical-timeline-element-content .vertical-timeline-element-date {
   display: inline-block;
@@ -188,10 +191,12 @@
 
 .vertical-timeline-element-title {
   margin: 10;
+  font-weight: bold
 }
 
 .vertical-timeline-element-subtitle {
   margin: 0;
+  font-weight: 500;
 }
 
 .vertical-timeline-element-content .vertical-timeline-element-date {

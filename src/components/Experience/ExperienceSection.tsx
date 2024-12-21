@@ -5,7 +5,7 @@ import VerticalTimelineComponent from "./VerticalTimelineComponent";
 const ExperienceSection = () => {
   const { isDarkMode } = useDarkModeContext();
   return (
-    <section className={`transition-all duration-500 flex flex-col px-10 py-10 ${isDarkMode ? "bg-neutral-900 text-slate-100" : "bg-white text-black"}`}>
+    <section className={`transition-all duration-500 flex flex-col slide-in-right`}>
       <div className="flex items-center mb-6 md:mb-12">
         <div className="flex items-center mt-6 mb-6">
           <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" alt="cat-typing" width="40"></img>
