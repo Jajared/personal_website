@@ -9,7 +9,7 @@ const HeaderSection = () => {
         <div className="w-40 h-40 overflow-hidden rounded-full">
           <img src={ProfileImage} alt="Profile" className="object-cover w-full h-full" />
         </div>
-        <h1 className="mt-6 mb-6 text-6xl font-extrabold">Hi! I am Jared! 👋</h1>
+        <h1 className="mt-6 mb-6 text-5xl font-extrabold md:text-6xl">Hi! I am Jared! 👋</h1>
         <p className="">I am a Computer Science student and a passionate full-stack developer based in Singapore 📍🇸🇬 </p>
       </div>
       <div className="flex flex-row items-center mt-4 space-x-6">

@@ -14,12 +14,12 @@ const SkillsSection = () => {
   return (
     <section className={`transition-all duration-500 box-border flex flex-col slide-in-left`}>
       <div className="flex items-center mb-6">
-        <h1 className="pr-8 text-3xl font-bold"> 🧰 Skills</h1>
+        <h1 className="pr-8 text-2xl font-bold md:text-3xl"> 🧰 Skills</h1>
         <div className={`transition-all duration-500 mt-2 border-b-2 border-black grow ${isDarkMode ? "border-white" : "border-black"}`}></div>
       </div>
       <SkillsTab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       <div className="md:h-[200px]">
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
           {data.map((item, key) => (
             <SkillCard key={key} data={item} />
           ))}

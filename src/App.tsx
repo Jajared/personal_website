@@ -20,7 +20,7 @@ const Content: React.FC = () => {
   const { isDarkMode, toggleDarkMode } = useDarkModeContext();
 
   return (
-    <div className={`${isDarkMode ? "bg-neutral-900 text-slate-50" : "bg-white text-black"} min-h-screen`}>
+    <div className={`text-sm md:text-base ${isDarkMode ? "bg-neutral-900 text-slate-50" : "bg-white text-black"} min-h-screen`}>
       <main className="max-w-[1200px] px-12 space-y-12 mx-auto overflow-x-hidden">
         <div className="flex justify-end px-5 py-5 mb-4">
           <button onClick={toggleDarkMode} className={`rounded-full w-10 h-10 absolute right-4 top-4 ${isDarkMode ? "bg-white" : "bg-neutral-900"} text-center leading-10`}>

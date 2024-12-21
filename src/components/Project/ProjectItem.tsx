@@ -12,7 +12,7 @@ function ProjectItem({ data }: IProjectItemProps) {
   const { title, description, techStack, projectImage, projectLink } = data;
 
   return (
-    <div className={`p-2 my-8 mb-20 shadow-lg bg-white rounded-2xl slide-in text-black`}>
+    <div className={`p-2 my-8 mb-10 shadow-lg bg-white rounded-2xl slide-in text-black`}>
       <div className="flex justify-end">
         <a href={projectLink} target="_blank" rel="noreferrer">
           <GithubIcon />

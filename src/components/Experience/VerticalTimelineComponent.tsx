@@ -19,7 +19,7 @@ function VerticalTimelineComponent({ data }: IExperienceItemProps) {
             <h4 className="vertical-timeline-element-subtitle">{item.company}</h4>
             <p>{item.description}</p>
             <div className="my-4">
-              {item.techStack.length > 0 ? <div className={`inline-block px-3 py-1 mb-4 text-sm font-semibold bg-gray-100 rounded-full ${isDarkMode ? "bg-neutral-900" : "bg-gray-100 "}`}>Tech Stack</div> : <div></div>}
+              {item.techStack.length > 0 ? <div className={`inline-block px-3 py-1 mb-4 text-xs md:text-sm font-semibold bg-gray-100 rounded-full ${isDarkMode ? "bg-neutral-900" : "bg-gray-100 "}`}>Tech Stack</div> : <div></div>}
               <div className="flex gap-2">
                 {item.techStack.map((Icon, index) => (
                   <div key={index} className="group hover:animate-bounce">

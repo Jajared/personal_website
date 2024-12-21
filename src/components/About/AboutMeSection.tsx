@@ -5,12 +5,15 @@ const AboutMeSection = () => {
   return (
     <section className={`transition-all duration-500 box-border flex flex-col slide-in-right  ${isDarkMode ? "text-slate-100" : "text-black"}`}>
       <div className="flex items-center mb-6">
-        <h1 className="pr-8 text-3xl font-bold"> 👦 About me</h1>
+        <h1 className="pr-8 text-2xl font-bold md:text-3xl"> 👦 About me</h1>
         <div className={`transition-all duration-500 mt-2 border-b-2 border-black grow ${isDarkMode ? "border-white" : "border-black"}`}></div>
       </div>
-      <div className="text-justify">
-        <p>I am a Year 3 Computer Science Student specialising in Software Engineering and Database Systems at the National University Of Singapore (NUS).</p>
-        <p>I thrive on challenges and enjoy the process of transforming complex problems into solutions that can solve real-world problems and bring about substantial positive change. I have experience working on various projects, from web to mobile applications. My background in developing full-stack applications has equipped me with a versatile skill set, enabling me to contribute effectively to both front-end and back-end development. Constantly expanding my knowledge and skills, I am eager to explore new technologies and embark on greater heights.</p>
+      <div>
+        <p>I am a Year 3 Computer Science student at the National University of Singapore (NUS), specializing in Software Engineering and Database Systems.</p>
+        <br />
+        <p>Passionate about tackling challenges, I enjoy crafting innovative solutions to real-world problems and driving meaningful change.</p>
+        <br />
+        <p>With hands-on experience in full-stack web development, I possess a versatile skill set and a drive to explore cutting-edge technologies and push boundaries.</p>
       </div>
     </section>
   );
