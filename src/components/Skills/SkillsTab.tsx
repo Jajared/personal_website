@@ -17,7 +17,7 @@ const SkillsTab = (props: ISkillsTabProps) => {
         <button
           key={tab}
           onClick={() => setSelectedTab(tab as SkillType)}
-          className={`px-4 py-2 rounded-full text-sm font-semibold ${selectedTab === tab ? (isDarkMode ? "bg-neutral-800 text-white w-32" : "bg-neutral-400 text-white w-32") : isDarkMode ? "bg-neutral-700 text-gray-300 hover:bg-neutral-600" : "bg-neutral-100 text-black hover:bg-gray-300"}`}
+          className={`px-4 py-2 rounded-full text-xs md:text-sm font-semibold ${selectedTab === tab ? (isDarkMode ? "bg-neutral-800 text-white w-32" : "bg-neutral-400 text-white w-32") : isDarkMode ? "bg-neutral-700 text-gray-300 hover:bg-neutral-600" : "bg-neutral-100 text-black hover:bg-gray-300"}`}
           style={{
             transition: "width 0.3s ease-in-out",
           }}
