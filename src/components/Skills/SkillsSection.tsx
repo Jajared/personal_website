@@ -18,7 +18,7 @@ const SkillsSection = () => {
         <div className={`transition-all duration-500 mt-2 border-b-2 border-black grow ${isDarkMode ? "border-white" : "border-black"}`}></div>
       </div>
       <SkillsTab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
-      <div className="md:h-[200px]">
+      <div className="md:h-[300px]">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
           {data.map((item, key) => (
             <SkillCard key={key} data={item} />
