@@ -4,9 +4,12 @@ import NUSLogo from "./assets/logos/nus-logo.jpeg";
 import VisionPalLogo from "./assets/logos/visionpal-logo.png";
 import HolicayLogo from "./assets/logos/holicay-logo.svg";
 import PintsaiLogo from "./assets/logos/pintsai-logo.jpeg";
-import { AwsIcon, DjangoIcon, DockerIcon, FirebaseIcon, JavascriptIcon, KubernetesIcon, LangchainIcon, MongoDbIcon, NestJsIcon, NextJsIcon, OpenAIIcon, PostgresqlIcon, PrismaIcon, PythonIcon, ReactIcon, TypescriptIcon } from "../components/DevIcons";
+import FortifaiLogo from "./assets/logos/fortifai-logo.svg";
+import { AwsIcon, CPPIcon, DjangoIcon, DockerIcon, DotNetIcon, FirebaseIcon, JavascriptIcon, KubernetesIcon, LangchainIcon, MongoDbIcon, NestJsIcon, NextJsIcon, OpenAIIcon, PostgresqlIcon, PrismaIcon, PythonIcon, ReactIcon, TypescriptIcon } from "../components/DevIcons";
+import React from "react";
 
 export const experienceData: ExperienceItemData[] = [
+  { company: "Fortifai", company_icon: FortifaiLogo, role: "Software Engineer Intern", startDate: "July 2025", endDate: "Present", description: "ESG Compliance SaaS", techStack: [TypescriptIcon, ReactIcon, CPPIcon, DotNetIcon, PostgresqlIcon] },
   { company: "Pints.ai", company_icon: PintsaiLogo, role: "Software Engineer Intern", startDate: "Oct 2024", endDate: "May 2025", description: "Building next-gen AI applications with compact LLMs", techStack: [NextJsIcon, TypescriptIcon, PostgresqlIcon, PrismaIcon, DjangoIcon, PythonIcon, LangchainIcon, AwsIcon, KubernetesIcon, DockerIcon] },
   { company: "Holicay", company_icon: HolicayLogo, role: "Software Engineer Intern", startDate: "May 2024", endDate: "Aug 2024", description: "Creating AI-powered tools for personalized DIY trips.", techStack: [ReactIcon, TypescriptIcon, MongoDbIcon, LangchainIcon, OpenAIIcon] },
   { company: "VisionPal", company_icon: VisionPalLogo, role: "Software Engineer Intern", startDate: "Dec 2023", endDate: "May 2024", description: "Revolutionizing eye health with mobile-first solutions.", techStack: [ReactIcon, JavascriptIcon] },
