@@ -6,7 +6,6 @@ import HolicayLogo from "./assets/logos/holicay-logo.svg";
 import PintsaiLogo from "./assets/logos/pintsai-logo.jpeg";
 import FortifaiLogo from "./assets/logos/fortifai-logo.svg";
 import { AwsIcon, CPPIcon, DjangoIcon, DockerIcon, DotNetIcon, FirebaseIcon, JavascriptIcon, KubernetesIcon, LangchainIcon, MongoDbIcon, NestJsIcon, NextJsIcon, OpenAIIcon, PostgresqlIcon, PrismaIcon, PythonIcon, ReactIcon, TypescriptIcon } from "../components/DevIcons";
-import React from "react";
 
 export const experienceData: ExperienceItemData[] = [
   { company: "Fortifai", company_icon: FortifaiLogo, role: "Software Engineer Intern", startDate: "July 2025", endDate: "Present", description: "ESG Compliance SaaS", techStack: [TypescriptIcon, ReactIcon, CPPIcon, DotNetIcon, PostgresqlIcon] },

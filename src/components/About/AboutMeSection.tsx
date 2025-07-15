@@ -6,7 +6,7 @@ const AboutMeSection = () => {
     <section className={`transition-all duration-500 box-border flex flex-col slide-in-right  ${isDarkMode ? "text-slate-100" : "text-black"}`}>
       <div className="flex items-center mb-6">
         <h1 className="pr-8 text-2xl font-bold md:text-3xl"> 👦 About me</h1>
-        <div className={`transition-all duration-500 mt-2 border-b-2 border-black grow ${isDarkMode ? "border-white" : "border-black"}`}></div>
+        <div className={`transition-all duration-500 mt-2 border-b-2 border-black grow ${isDarkMode ? "border-white" : "border-black"}`} />
       </div>
       <div>
         <p>I am a final year Computer Science student at the National University of Singapore (NUS), specializing in Software Engineering and Database Systems.</p>

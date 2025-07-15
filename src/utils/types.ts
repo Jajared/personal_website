@@ -14,7 +14,7 @@ export interface ProjectItemData {
   techStack: React.FC<{ width?: number; height?: number; isDarkMode?: boolean }>[];
   year: number;
   projectImage: string;
-  projectLink: string;
+  projectLink: string | null;
 }
 
 export type SkillType = "Frontend" | "Backend" | "Languages" | "Tools" | "AI/ML";
