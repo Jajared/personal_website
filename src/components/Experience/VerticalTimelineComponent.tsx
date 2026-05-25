@@ -13,7 +13,7 @@ function VerticalTimelineComponent({ data }: IExperienceItemProps) {
   return (
     <VerticalTimeline lineColor={`${isDarkMode ? "white" : "black"}`}>
       {data.map((item: ExperienceItemData, key) => (
-        <VerticalTimelineElement className="vertical-timeline-element--work" contentStyle={isDarkMode ? { background: "#282828", color: "white" } : { background: "white", color: "black" }} contentArrowStyle={isDarkMode ? { borderRight: "7px solid #393939" } : { borderRight: "7px solid  black" }} date={`${item.startDate} - ${item.endDate}`} iconStyle={{ background: "white", color: "white" }} icon={<img src={item.company_icon} alt={item.company}></img>}>
+        <VerticalTimelineElement key={key} className="vertical-timeline-element--work" contentStyle={isDarkMode ? { background: "#282828", color: "white" } : { background: "white", color: "black" }} contentArrowStyle={isDarkMode ? { borderRight: "7px solid #393939" } : { borderRight: "7px solid  black" }} date={`${item.startDate} - ${item.endDate}`} iconStyle={{ background: "white", color: "white" }} icon={<img src={item.company_icon} alt={item.company}></img>}>
           <div className={`transition-all duration-500 ${isDarkMode ? "text-slate-100" : "text-black"}`}>
             <h3 className="vertical-timeline-element-title">{item.role}</h3>
             <h4 className="vertical-timeline-element-subtitle">{item.company}</h4>
