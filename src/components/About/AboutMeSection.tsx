@@ -9,7 +9,7 @@ const AboutMeSection = () => {
         <div className={`transition-all duration-500 mt-2 border-b-2 border-black grow ${isDarkMode ? "border-white" : "border-black"}`} />
       </div>
       <div>
-        <p>I am a final year Computer Science student at the National University of Singapore (NUS), specializing in Software Engineering and Database Systems.</p>
+        <p>I am a Computer Science fresh graduate from the National University of Singapore (NUS), specializing in Software Engineering.</p>
         <br />
         <p>Passionate about tackling challenges, I enjoy crafting innovative solutions to real-world problems and driving meaningful change.</p>
         <br />

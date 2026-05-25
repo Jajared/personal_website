@@ -1,4 +1,4 @@
-import { AwsIcon, CssIcon, DjangoIcon, DockerIcon, FigmaIcon, FirebaseIcon, FlutterIcon, GithubIcon, GraphQLIcon, HtmlIcon, JavaIcon, JavascriptIcon, KubernetesIcon, LangchainIcon, MongoDbIcon, NestJsIcon, NextJsIcon, NodeJsIcon, OpenAIIcon, PostgresqlIcon, PrismaIcon, PythonIcon, ReactIcon, RedisIcon, SupabaseIcon, TailwindCSSIcon, TypescriptIcon } from "../components/DevIcons";
+import { AwsIcon, CssIcon, DjangoIcon, DockerIcon, FigmaIcon, FirebaseIcon, ExpressJsIcon, FlutterIcon, GithubIcon, GraphQLIcon, HtmlIcon, JavaIcon, JavascriptIcon, KubernetesIcon, LangchainIcon, MongoDbIcon, NestJsIcon, NextJsIcon, NodeJsIcon, OpenAIIcon, PostgresqlIcon, PrismaIcon, PythonIcon, ReactIcon, RedisIcon, SupabaseIcon, TailwindCSSIcon, TypescriptIcon } from "../components/DevIcons";
 import { SkillsItemData } from "../utils/types";
 
 export const skillsData: SkillsItemData[] = [
@@ -18,6 +18,7 @@ export const skillsData: SkillsItemData[] = [
   { name: "Supabase", Icon: SupabaseIcon, type: "Backend" },
   { name: "GraphQL", Icon: GraphQLIcon, type: "Backend" },
   { name: "Redis", Icon: RedisIcon, type: "Backend" },
+  { name: "ExpressJS", Icon: ExpressJsIcon, type: "Backend" },
   { name: "TypeScript", Icon: TypescriptIcon, type: "Languages" },
   { name: "Javascript", Icon: JavascriptIcon, type: "Languages" },
   { name: "OpenAI", Icon: OpenAIIcon, type: "AI/ML" },

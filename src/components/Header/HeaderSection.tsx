@@ -15,7 +15,7 @@ const HeaderSection = () => {
           <img src={ProfileImage} alt="Profile" className="object-cover w-full h-full" />
         </div>
         <h1 className="mt-6 mb-6 text-5xl font-extrabold md:text-6xl">Hi! I am Jared! 👋</h1>
-        <p className="">I am a Computer Science student and a passionate full-stack developer based in Singapore 📍🇸🇬 </p>
+        <p className="">I am a passionate junior full-stack developer based in Singapore 📍🇸🇬 </p>
       </div>
       <div className="flex flex-row items-center mt-4 space-x-6">
         <a href="https://www.instagram.com/jajabonks/" className="bounce-effect">
