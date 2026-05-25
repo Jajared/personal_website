@@ -1,6 +1,10 @@
 import ProfileImage from "../../data/assets/profile-image.jpg";
 import { useDarkModeContext } from "../../hooks/useDarkMode";
 import { GithubIcon, LinkedinIcon } from "../DevIcons";
+import InstagramIcon from "../../data/assets/icons/instagram-icon.png";
+import EmailIcon from "../../data/assets/icons/mail-icon.png";
+import PortfolioIcon from "../../data/assets/icons/portfolio-icon.png";
+import Portfolio from "../../data/assets/portfolio-jared-wong.pdf";
 
 const HeaderSection = () => {
   const { isDarkMode } = useDarkModeContext();
@@ -15,7 +19,7 @@ const HeaderSection = () => {
       </div>
       <div className="flex flex-row items-center mt-4 space-x-6">
         <a href="https://www.instagram.com/jajabonks/" className="bounce-effect">
-          <img src={require("../../data/assets/icons/instagram-icon.png")} alt="Instagram" className="w-6 h-6" />
+          <img src={InstagramIcon} alt="Instagram" className="w-6 h-6" />
         </a>
 
         <a href="https://github.com/Jajared" className="group hover:animate-bounce">
@@ -27,11 +31,11 @@ const HeaderSection = () => {
         </a>
 
         <a href="mailto: jajawong09@gmail.com" className="bounce-effect">
-          <img src={require("../../data/assets/icons/mail-icon.png")} alt="Email" className="w-6 h-6" style={isDarkMode ? { filter: "invert(1) saturate(100%) brightness(300%)" } : {}} />
+          <img src={EmailIcon} alt="Email" className="w-6 h-6" style={isDarkMode ? { filter: "invert(1) saturate(100%) brightness(300%)" } : {}} />
         </a>
 
-        <a href={require("../../data/assets/portfolio-jared-wong.pdf")} className="bounce-effect">
-          <img src={require("../../data/assets/icons/portfolio-icon.png")} alt="Email" className="w-6 h-6" />
+        <a href={Portfolio} className="bounce-effect">
+          <img src={PortfolioIcon} alt="Email" className="w-6 h-6" />
         </a>
       </div>
     </section>

@@ -24,7 +24,7 @@ export const skillsData: SkillsItemData[] = [
   { name: "Langchain", Icon: LangchainIcon, type: "AI/ML" },
   { name: "Python", Icon: PythonIcon, type: "Languages" },
   { name: "Java", Icon: JavaIcon, type: "Languages" },
-  { name: "Certified Solutions Architect", Icon: AwsIcon, type: "Tools" },
+  // { name: "Certified Solutions Architect", Icon: AwsIcon, type: "Tools" },
   { name: "Certified Cloud Practitioner", Icon: AwsIcon, type: "Tools" },
   { name: "Github", Icon: GithubIcon, type: "Tools" },
   { name: "Figma", Icon: FigmaIcon, type: "Tools" },
