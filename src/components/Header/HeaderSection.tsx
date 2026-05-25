@@ -22,7 +22,7 @@ const HeaderSection = () => {
           <GithubIcon inverted={isDarkMode} />
         </a>
 
-        <a href="https://www.linkedin.com/in/jared-wong-4a7a721a4/" className="group hover:animate-bounce">
+        <a href="https://www.linkedin.com/in/jajabonks/" className="group hover:animate-bounce">
           <LinkedinIcon />
         </a>
 
