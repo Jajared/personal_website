@@ -46,6 +46,7 @@ export const skillsData: SkillsItemData[] = [
   { name: "Supabase", Icon: SupabaseIcon, type: "Backend" },
   { name: "GraphQL", Icon: GraphQLIcon, type: "Backend" },
   { name: "Redis", Icon: RedisIcon, type: "Backend" },
+  { name: "ExpressJS", Icon: ExpressJsIcon, type: "Backend" },
   { name: "TypeScript", Icon: TypescriptIcon, type: "Languages" },
   { name: "Javascript", Icon: JavascriptIcon, type: "Languages" },
   { name: "OpenAI", Icon: OpenAIIcon, type: "AI/ML" },
