@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+
+/*
+  Design tokens.
+  A warm-graphite, near-monochrome dark system with a single Claude-terracotta accent.
+  Semantic colors are plain CSS variables; `@theme inline` re-exposes them as
+  Tailwind utilities (bg-surface, text-ink, ...).
+*/
+:root {
+  color-scheme: dark;
+
+  --bg: oklch(0.185 0.006 60);
+  --surface: oklch(0.225 0.008 60);
+  --surface-2: oklch(0.26 0.009 60);
+  --ink: oklch(0.94 0.004 65);
+  --muted: oklch(0.68 0.014 60);
+  --faint: oklch(0.56 0.014 60);
+  --line: oklch(0.32 0.01 60);
+  --line-strong: oklch(0.4 0.012 60);
+  --accent: oklch(0.74 0.13 48);
+  --accent-soft: oklch(0.74 0.13 48 / 16%);
+  --accent-contrast: oklch(0.2 0.028 45);
+  --shadow-color: 22 40% 3%;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-contrast: var(--accent-contrast);
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk Variable", "Inter Variable", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, "SFMono-Regular", monospace;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in oklch, var(--accent) 26%, transparent);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /* Section anchors clear the sticky nav */
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@layer utilities {
+  /* Faint engineering graph-paper texture, used sparingly behind the hero */
+  .grid-texture {
+    background-image:
+      linear-gradient(to right, var(--line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 0%, transparent 78%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 0%, transparent 78%);
+    opacity: 0.6;
+  }
+
+  /* Animated underline for text links */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1.5px;
+    transition: background-size 0.35s var(--ease-out-soft);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1.5px;
+  }
+
+  /* Scroll-reveal primitive (driven by <Reveal />) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s var(--ease-out-soft),
+      transform 0.7s var(--ease-out-soft);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 1px 2px hsl(var(--shadow-color) / 0.06), 0 8px 24px -12px hsl(var(--shadow-color) / 0.16);
+  }
+  .shadow-lift {
+    box-shadow: 0 2px 4px hsl(var(--shadow-color) / 0.08), 0 24px 48px -20px hsl(var(--shadow-color) / 0.28);
+  }
+}
+
+/* Hero load-in sequence */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  opacity: 0;
+  animation: rise 0.9s var(--ease-out-soft) forwards;
+}
+
+/* Blinking terminal-style caret for the hero status line */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.caret {
+  animation: blink 1.1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .animate-rise {
+    opacity: 1;
+    animation: none;
+  }
+}

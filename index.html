@@ -2,12 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="This is a story about me" />
-    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="icon" href="/favicon.ico" />
     <link rel="manifest" href="/manifest.json" />
+
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#14171c" />
+
+    <title>Jared Wong — Software Engineer</title>
+    <meta
+      name="description"
+      content="Jared Wong is a full-stack software engineer based in Singapore, building web and AI products end to end."
+    />
+    <link rel="canonical" href="https://jajared.vercel.app" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jared Wong — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Full-stack software engineer based in Singapore, building web and AI products end to end."
+    />
+    <meta property="og:url" content="https://jajared.vercel.app" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Jared Wong — Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Full-stack software engineer based in Singapore, building web and AI products end to end."
+    />
 
     <script type="application/ld+json">
       {
@@ -17,18 +39,20 @@
         "url": "https://jajared.vercel.app",
         "sameAs": [
           "https://github.com/Jajared",
-          "https://www.linkedin.com/in/jajabonks/"
+          "https://www.linkedin.com/in/jajabonks/",
+          "https://www.instagram.com/jajabonks/"
         ],
-        "jobTitle": "Software Engineer"
+        "jobTitle": "Software Engineer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Singapore"
+        }
       }
     </script>
-
-    <title>Jared Wong - Software Engineer</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>You need to enable JavaScript to view this site.</noscript>
     <div id="root"></div>
-    
-    <script type="module" src="/src/index.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

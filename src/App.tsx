@@ -1,40 +1,25 @@
-import React from "react";
-import "./App.css";
-import "./App.css";
-import ProjectSection from "./components/Project/ProjectSection";
-import ExperienceSection from "./components/Experience/ExperienceSection";
-import AboutMeSection from "./components/About/AboutMeSection";
-import HeaderSection from "./components/Header/HeaderSection";
-import { DarkModeProvider, useDarkModeContext } from "./hooks/useDarkMode";
-import SkillsSection from "./components/Skills/SkillsSection";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
+import { About } from "@/sections/About";
+import { Contact } from "@/sections/Contact";
+import { Experience } from "@/sections/Experience";
+import { Hero } from "@/sections/Hero";
+import { Projects } from "@/sections/Projects";
+import { Skills } from "@/sections/Skills";
 
-const App: React.FC = () => {
+export default function App() {
   return (
-    <DarkModeProvider>
-      <Content />
-    </DarkModeProvider>
-  );
-};
-
-const Content: React.FC = () => {
-  const { isDarkMode, toggleDarkMode } = useDarkModeContext();
-
-  return (
-    <div className={`text-sm md:text-base ${isDarkMode ? "bg-neutral-900 text-slate-50" : "bg-white text-black"} min-h-screen`}>
-      <main className="max-w-[1200px] px-8 space-y-12 mx-auto overflow-x-hidden">
-        <div className="flex justify-end px-5 py-5 mb-4">
-          <button onClick={toggleDarkMode} className={`rounded-full w-10 h-10 absolute right-4 top-4 ${isDarkMode ? "bg-white" : "bg-neutral-900"} text-center leading-10`}>
-            {isDarkMode ? "🌙" : "☀️"}
-          </button>
-        </div>
-        <HeaderSection />
-        <AboutMeSection />
-        <SkillsSection />
-        <ExperienceSection />
-        <ProjectSection />
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
       </main>
-    </div>
+      <Footer />
+    </>
   );
-};
-
-export default App;
+}

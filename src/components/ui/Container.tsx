@@ -1,0 +1,11 @@
+import type { ReactNode } from "react";
+import { cn } from "@/lib/cn";
+
+/** Centered page column with consistent responsive gutters. */
+export function Container({ children, className }: { children: ReactNode; className?: string }) {
+  return (
+    <div className={cn("mx-auto w-full max-w-[68rem] px-6 sm:px-8 lg:px-10", className)}>
+      {children}
+    </div>
+  );
+}

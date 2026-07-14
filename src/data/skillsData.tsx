@@ -1,5 +1,33 @@
-import { AwsIcon, CssIcon, DjangoIcon, DockerIcon, FigmaIcon, FirebaseIcon, FlutterIcon, GithubIcon, GraphQLIcon, HtmlIcon, JavaIcon, JavascriptIcon, KubernetesIcon, LangchainIcon, MongoDbIcon, NestJsIcon, NextJsIcon, NodeJsIcon, OpenAIIcon, PostgresqlIcon, PrismaIcon, PythonIcon, ReactIcon, RedisIcon, SupabaseIcon, TailwindCSSIcon, TypescriptIcon } from "../components/DevIcons";
-import { SkillsItemData } from "../utils/types";
+import {
+  AwsIcon,
+  CssIcon,
+  DjangoIcon,
+  DockerIcon,
+  FigmaIcon,
+  FirebaseIcon,
+  FlutterIcon,
+  GithubIcon,
+  GraphQLIcon,
+  HtmlIcon,
+  JavaIcon,
+  JavascriptIcon,
+  KubernetesIcon,
+  LangchainIcon,
+  MongoDbIcon,
+  NestJsIcon,
+  NextJsIcon,
+  NodeJsIcon,
+  OpenAIIcon,
+  PostgresqlIcon,
+  PrismaIcon,
+  PythonIcon,
+  ReactIcon,
+  RedisIcon,
+  SupabaseIcon,
+  TailwindCSSIcon,
+  TypescriptIcon,
+} from "@/components/icons/DevIcons";
+import type { SkillsItemData } from "@/lib/types";
 
 export const skillsData: SkillsItemData[] = [
   { name: "React / React Native", Icon: ReactIcon, type: "Frontend" },

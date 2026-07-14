@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# Jared Wong — Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A single-page portfolio built as a Vite + React SPA.
 
-## Available Scripts
+## Stack
 
-In the project directory, you can run:
+- **Vite** — dev server and build
+- **React 19** + **TypeScript** (strict, `@/*` path alias)
+- **Tailwind CSS v4** — CSS-first config in `src/styles/globals.css` (`@theme` tokens, class-based dark mode)
+- **Biome** — linting and formatting
+- Self-hosted variable fonts via Fontsource (Space Grotesk, Inter, JetBrains Mono)
 
-### `npm start`
+## Scripts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npm run dev        # start the dev server
+npm run build      # typecheck + production build to dist/
+npm run preview    # preview the production build
+npm run typecheck  # tsc --noEmit
+npm run lint       # biome check
+npm run format     # biome format --write
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Structure
 
-### `npm test`
+```
+src/
+  main.tsx              # entry
+  App.tsx               # composition
+  styles/globals.css    # Tailwind import + design tokens + base styles
+  lib/                  # cn, types, siteConfig
+  hooks/                # useTheme, useActiveSection, useSingaporeTime
+  components/
+    icons/              # brand tech logos (DevIcons) + monoline UI icons
+    ui/                 # Container, Reveal, SectionHeading, ThemeToggle, SocialLinks, TechRail
+    layout/             # Navbar, Footer
+  sections/             # Hero, About, Skills, Experience, Projects, Contact
+  data/                 # content (experience, projects, skills) + assets
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Content lives in `src/data/*`. To update experience, projects, or skills, edit those files.
