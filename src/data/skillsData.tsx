@@ -3,6 +3,7 @@ import {
   CssIcon,
   DjangoIcon,
   DockerIcon,
+  ExpressJsIcon,
   FigmaIcon,
   FirebaseIcon,
   FlutterIcon,
