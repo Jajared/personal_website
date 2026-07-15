@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 interface TypewriterOptions {
   /** Milliseconds between characters. */
@@ -19,11 +19,15 @@ export function useTypewriter(
   const reduceMotion =
     typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const [count, setCount] = useState(reduceMotion ? text.length : 0);
+  // Split into code points so multi-unit characters (e.g. emoji surrogate
+  // pairs) are revealed atomically rather than briefly showing a broken half.
+  const chars = useMemo(() => Array.from(text), [text]);
+
+  const [count, setCount] = useState(reduceMotion ? chars.length : 0);
 
   useEffect(() => {
     if (reduceMotion) {
-      setCount(text.length);
+      setCount(chars.length);
       return;
     }
     setCount(0);
@@ -32,14 +36,14 @@ export function useTypewriter(
     const tick = () => {
       index += 1;
       setCount(index);
-      if (index < text.length) timer = setTimeout(tick, speed);
+      if (index < chars.length) timer = setTimeout(tick, speed);
     };
     const start = setTimeout(tick, startDelay);
     return () => {
       clearTimeout(start);
       clearTimeout(timer);
     };
-  }, [text, speed, startDelay, reduceMotion]);
+  }, [chars, speed, startDelay, reduceMotion]);
 
-  return { typed: text.slice(0, count), done: count >= text.length };
+  return { typed: chars.slice(0, count).join(""), done: count >= chars.length };
 }

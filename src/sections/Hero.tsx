@@ -35,7 +35,13 @@ function ModeButton({
 
 export function Hero() {
   const [selectedMode, setSelectedMode] = useState<Mode>("overview");
-  const { typed, done } = useTypewriter("Hi, I'm Jared", { speed: 90, startDelay: 350 });
+  const { typed, done } = useTypewriter("Hi, I'm Jared! 👋", { speed: 90, startDelay: 350 });
+
+  // Split the typed substring around the "!" so it keeps its accent colour as
+  // the animation reveals it (and the trailing " 👋").
+  const bangIndex = typed.indexOf("!");
+  const beforeBang = bangIndex === -1 ? typed : typed.slice(0, bangIndex);
+  const afterBang = bangIndex === -1 ? "" : typed.slice(bangIndex + 1);
 
   // Dev mode (the interactive terminal) is a desktop experience — typing
   // commands on a phone is awkward — so it's disabled below the same `md`
@@ -81,12 +87,10 @@ export function Hero() {
                   Hi, I'm Jared<span className="text-accent">!</span> 👋
                 </span>
                 <span aria-hidden="true" className="col-start-1 row-start-1">
-                  {typed}
-                  {done ? (
-                    <>
-                      <span className="text-accent">!</span> 👋
-                    </>
-                  ) : (
+                  {beforeBang}
+                  {bangIndex !== -1 && <span className="text-accent">!</span>}
+                  {afterBang}
+                  {!done && (
                     <span className="caret ml-1 inline-block h-[0.8em] w-[0.06em] translate-y-[0.06em] rounded-full bg-accent" />
                   )}
                 </span>
@@ -101,20 +105,19 @@ export function Hero() {
                 full-stack TypeScript.
               </p>
 
-              <div
-                className="animate-rise mt-10 flex flex-wrap items-center gap-x-6 gap-y-4"
-                style={{ animationDelay: "330ms" }}
-              >
-                <a
-                  href="#projects"
-                  className="inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-accent-contrast transition-transform duration-200 hover:-translate-y-0.5"
-                >
-                  View my work
-                </a>
-                <a href="#contact" className="link-underline text-sm font-medium text-ink">
-                  Get in touch
-                </a>
-                <SocialLinks className="sm:ml-1" />
+              <div className="animate-rise mt-10" style={{ animationDelay: "330ms" }}>
+                <SocialLinks />
+                <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
+                  <a
+                    href="#projects"
+                    className="inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-accent-contrast transition-transform duration-200 hover:-translate-y-0.5"
+                  >
+                    View my work
+                  </a>
+                  <a href="#contact" className="link-underline text-sm font-medium text-ink">
+                    Get in touch
+                  </a>
+                </div>
               </div>
             </div>
           ) : (

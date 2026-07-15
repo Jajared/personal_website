@@ -1,18 +1,11 @@
 import type { ComponentType } from "react";
-import {
-  GithubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  MailIcon,
-  ResumeIcon,
-} from "@/components/icons/UiIcons";
+import { GithubIcon, LinkedinIcon, MailIcon, ResumeIcon } from "@/components/icons/UiIcons";
 import { cn } from "@/lib/cn";
 import { type SocialKey, socialLinks } from "@/lib/siteConfig";
 
 const icons: Record<SocialKey, ComponentType<{ size?: number }>> = {
   github: GithubIcon,
   linkedin: LinkedinIcon,
-  instagram: InstagramIcon,
   email: MailIcon,
   resume: ResumeIcon,
 };

@@ -1,5 +1,6 @@
 import {
   AwsIcon,
+  ClaudeIcon,
   CssIcon,
   DjangoIcon,
   DockerIcon,
@@ -60,4 +61,5 @@ export const skillsData: SkillsItemData[] = [
   { name: "Figma", Icon: FigmaIcon, type: "Tools" },
   { name: "Docker", Icon: DockerIcon, type: "Tools" },
   { name: "Kubernetes", Icon: KubernetesIcon, type: "Tools" },
+  { name: "Claude Code", Icon: ClaudeIcon, type: "Tools" },
 ];

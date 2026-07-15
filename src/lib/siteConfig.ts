@@ -32,7 +32,7 @@ export const navItems: NavItem[] = [
   { id: "contact", label: "Contact" },
 ];
 
-export type SocialKey = "github" | "linkedin" | "instagram" | "email" | "resume";
+export type SocialKey = "github" | "linkedin" | "email" | "resume";
 
 export interface SocialLink {
   key: SocialKey;
@@ -43,7 +43,6 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
   { key: "github", label: "GitHub", href: "https://github.com/Jajared" },
   { key: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/jajabonks/" },
-  { key: "instagram", label: "Instagram", href: "https://www.instagram.com/jajabonks/" },
   { key: "email", label: "Email", href: `mailto:${siteConfig.email}` },
   { key: "resume", label: "Résumé", href: siteConfig.resume },
 ];

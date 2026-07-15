@@ -4,8 +4,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import ProfileImage from "@/data/assets/profile-image.jpg";
 
 const facts: { label: string; value: string }[] = [
-  { label: "Location", value: "Singapore" },
-  { label: "Focus", value: "Full-stack · AI/ML" },
+  { label: "Location", value: "Singapore 🇸🇬" },
+  { label: "Focus", value: "Full-stack · AI/ML · Cloud" },
   { label: "Education", value: "Computer Science, NUS" },
   { label: "Currently", value: "AI Engineer, Pints.ai" },
 ];
