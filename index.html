@@ -57,20 +57,57 @@
         "@type": "Person",
         "name": "Jared Wong",
         "url": "https://jajared.vercel.app",
+        "image": "https://jajared.vercel.app/og-image.png",
+        "email": "mailto:jajawong09@gmail.com",
         "sameAs": [
           "https://github.com/Jajared",
           "https://www.linkedin.com/in/jajabonks/"
         ],
         "jobTitle": "Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Pints.ai"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "National University of Singapore"
+        },
+        "knowsAbout": [
+          "Full-stack Web Development",
+          "Artificial Intelligence",
+          "Machine Learning",
+          "TypeScript",
+          "React",
+          "Cloud Computing"
+        ],
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Singapore"
+          "addressLocality": "Singapore",
+          "addressCountry": "SG"
         }
       }
     </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to view this site.</noscript>
+    <noscript>
+      <div style="max-width: 44rem; margin: 0 auto; padding: 4rem 1.5rem; line-height: 1.6">
+        <h1 style="font-size: 2rem; font-weight: 600; margin: 0 0 0.5rem">Jared Wong</h1>
+        <p style="margin: 0 0 1.25rem; opacity: 0.75">Software Engineer · Singapore</p>
+        <p style="margin: 0 0 1.25rem">
+          I'm a full-stack software engineer based in Singapore, building web and AI products end to
+          end — from the data model and API to the last pixel of the interface. Computer Science
+          graduate from the National University of Singapore, currently an AI Engineer at Pints.ai.
+        </p>
+        <p style="margin: 0 0 1.25rem">
+          <a href="https://github.com/Jajared" style="color: #d9885f">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/jajabonks/" style="color: #d9885f">LinkedIn</a> ·
+          <a href="mailto:jajawong09@gmail.com" style="color: #d9885f">Email</a>
+        </p>
+        <p style="margin: 0; opacity: 0.6; font-size: 0.875rem">
+          This site is interactive — enable JavaScript for the full experience.
+        </p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
