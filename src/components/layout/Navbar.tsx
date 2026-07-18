@@ -51,10 +51,14 @@ export function Navbar() {
         <button
           type="button"
           onClick={toTop}
-          className="group inline-flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-ink"
+          aria-label="Back to top"
+          className="group inline-flex items-center gap-2"
         >
-          {siteConfig.name}
-          <span className="h-1.5 w-1.5 rounded-full bg-accent transition-transform duration-300 group-hover:scale-150" />
+          <img
+            src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif"
+            alt={siteConfig.name}
+            className="h-8 w-auto"
+          />
         </button>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -93,7 +97,11 @@ export function Navbar() {
       {open && (
         <div className="fixed inset-0 z-50 bg-bg md:hidden">
           <Container className="flex h-16 items-center justify-between">
-            <span className="font-display text-lg font-semibold text-ink">{siteConfig.name}</span>
+            <img
+              src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif"
+              alt={siteConfig.name}
+              className="h-10 w-auto"
+            />
             <button
               type="button"
               aria-label="Close menu"

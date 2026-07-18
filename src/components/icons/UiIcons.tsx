@@ -89,6 +89,14 @@ export function ArrowDownIcon(props: IconProps) {
   );
 }
 
+export function ChevronDownIcon(props: IconProps) {
+  return (
+    <StrokeIcon {...props}>
+      <path d="m6 9 6 6 6-6" />
+    </StrokeIcon>
+  );
+}
+
 export function ArrowUpIcon(props: IconProps) {
   return (
     <StrokeIcon {...props}>

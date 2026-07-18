@@ -159,7 +159,7 @@ export function ContactForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           aria-describedby={describedBy}
-          placeholder="you@company.com"
+          placeholder="Your Email"
           className="w-full rounded-lg border border-line bg-bg px-4 py-3 text-ink transition-colors placeholder:text-faint hover:border-line-strong focus:border-accent"
         />
       </div>
@@ -178,7 +178,7 @@ export function ContactForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           aria-describedby={describedBy}
-          placeholder="What are you working on?"
+          placeholder="How can I help?"
           className="w-full resize-y rounded-lg border border-line bg-bg px-4 py-3 text-ink transition-colors placeholder:text-faint hover:border-line-strong focus:border-accent"
         />
       </div>

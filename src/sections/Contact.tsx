@@ -29,8 +29,8 @@ export function Contact() {
             </h2>
 
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted">
-              Have a project, a role, or a half-formed idea? Send it over — I read every message and
-              usually reply within a day or two.
+              Have a project, a role, or a half-formed idea? Send it over and I'll get back to you as
+              soon as possible!
             </p>
           </Reveal>
 
