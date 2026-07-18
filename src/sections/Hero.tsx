@@ -3,7 +3,6 @@ import { Console } from "@/components/ui/Console";
 import { Container } from "@/components/ui/Container";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { useTypewriter } from "@/hooks/useTypewriter";
 import { cn } from "@/lib/cn";
 import { siteConfig } from "@/lib/siteConfig";
 
@@ -35,13 +34,6 @@ function ModeButton({
 
 export function Hero() {
   const [selectedMode, setSelectedMode] = useState<Mode>("overview");
-  const { typed, done } = useTypewriter("Hi, I'm Jared! 👋", { speed: 90, startDelay: 350 });
-
-  // Split the typed substring around the "!" so it keeps its accent colour as
-  // the animation reveals it (and the trailing " 👋").
-  const bangIndex = typed.indexOf("!");
-  const beforeBang = bangIndex === -1 ? typed : typed.slice(0, bangIndex);
-  const afterBang = bangIndex === -1 ? "" : typed.slice(bangIndex + 1);
 
   // Dev mode (the interactive terminal) is a desktop experience — typing
   // commands on a phone is awkward — so it's disabled below the same `md`
@@ -78,22 +70,10 @@ export function Hero() {
               </p>
 
               <h1
-                aria-label="Hi, I'm Jared! 👋"
-                className="animate-rise mt-6 grid font-display text-[clamp(3rem,9vw,6.5rem)] font-semibold leading-[0.95] tracking-tight text-ink"
+                className="animate-rise mt-6 font-display text-[clamp(3rem,9vw,6.5rem)] font-semibold leading-[0.95] tracking-tight text-ink"
                 style={{ animationDelay: "150ms" }}
               >
-                {/* Invisible full-text clone reserves the final footprint so content below never reflows while typing. */}
-                <span aria-hidden="true" className="invisible col-start-1 row-start-1">
-                  Hi, I'm Jared<span className="text-accent">!</span> 👋
-                </span>
-                <span aria-hidden="true" className="col-start-1 row-start-1">
-                  {beforeBang}
-                  {bangIndex !== -1 && <span className="text-accent">!</span>}
-                  {afterBang}
-                  {!done && (
-                    <span className="caret ml-1 inline-block h-[0.8em] w-[0.06em] translate-y-[0.06em] rounded-full bg-accent" />
-                  )}
-                </span>
+                Hi, I'm Jared<span className="text-accent">!</span> 👋
               </h1>
 
               <p
