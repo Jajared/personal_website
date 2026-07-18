@@ -18,7 +18,8 @@ export interface ProjectItemData {
   description: string;
   techStack: TechIcon[];
   year: number;
-  projectImage: string;
+  /** One or more screenshots; the card auto-cycles through them when there's more than one. */
+  projectImages: string[];
   projectLink: string | null;
 }
 

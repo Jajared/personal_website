@@ -1,5 +1,6 @@
 import { ArrowUpRightIcon, GithubIcon } from "@/components/icons/UiIcons";
 import { Container } from "@/components/ui/Container";
+import { ImageCarousel } from "@/components/ui/ImageCarousel";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TechRail } from "@/components/ui/TechRail";
@@ -24,14 +25,7 @@ function ProjectLink({ href }: { href: string }) {
 function ProjectCard({ project }: { project: ProjectItemData }) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-line-strong hover:shadow-lift">
-      <div className="aspect-[4/3] overflow-hidden border-b border-line bg-surface-2 p-5">
-        <img
-          src={project.projectImage}
-          alt={project.title}
-          loading="lazy"
-          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
-        />
-      </div>
+      <ImageCarousel images={project.projectImages} alt={project.title} />
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-baseline justify-between gap-4">
           <h3 className="font-display text-xl font-semibold text-ink">{project.title}</h3>

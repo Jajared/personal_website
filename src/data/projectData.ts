@@ -13,11 +13,23 @@ import {
 } from "@/components/icons/DevIcons";
 import type { ProjectItemData } from "@/lib/types";
 import Connectlab from "./assets/connectlab_website.png";
-import FinanceTracker from "./assets/gifs/finance-tracker.gif";
-import HappyLungs from "./assets/gifs/HappyLungs.gif";
-import MedAlert from "./assets/gifs/MedAlert.gif";
-import PeerPrep from "./assets/gifs/PeerPrep.jpg";
-import paradeStateBot from "./assets/parade_state_bot.svg";
+import Finance1 from "./assets/images/Finance_1.png";
+import Finance2 from "./assets/images/Finance_2.png";
+import Finance3 from "./assets/images/Finance_3.png";
+import Finance4 from "./assets/images/Finance_4.png";
+import HappyLungs1 from "./assets/images/HappyLungs_1.png";
+import HappyLungs2 from "./assets/images/HappyLungs_2.png";
+import HappyLungs3 from "./assets/images/HappyLungs_3.png";
+import HappyLungs4 from "./assets/images/HappyLungs_4.png";
+import HappyLungs5 from "./assets/images/HappyLungs_5.png";
+import MedAlert1 from "./assets/images/MedAlert_1.png";
+import MedAlert2 from "./assets/images/MedAlert_2.png";
+import MedAlert3 from "./assets/images/MedAlert_3.png";
+import MedAlert4 from "./assets/images/MedAlert_4.png";
+import MedAlert5 from "./assets/images/MedAlert_5.png";
+import MedAlert6 from "./assets/images/MedAlert_6.png";
+import PeerPrep from "./assets/images/PeerPrep.jpg";
+import paradeStateBot from "./assets/images/ParadeStateBot.png";
 
 export const projectData: ProjectItemData[] = [
   {
@@ -26,7 +38,7 @@ export const projectData: ProjectItemData[] = [
     description:
       "PeerPrep is a platform that connects students to practice technical interviews with their peers. It provides a seamless experience for users to schedule, conduct and review mock interviews.",
     techStack: [NextJsIcon, TypescriptIcon, NestJsIcon, MongoDbIcon, RedisIcon, DockerIcon],
-    projectImage: PeerPrep,
+    projectImages: [PeerPrep],
     projectLink: null,
   },
   {
@@ -35,7 +47,7 @@ export const projectData: ProjectItemData[] = [
     description:
       "Encouraging users to quit smoking by providing a platform to track cigarette consumption.\n\nDeveloped in collaboration with NUS School of Computing Health Informatics Lab and local health organisations",
     techStack: [ReactIcon, TypescriptIcon, JavascriptIcon, FirebaseIcon],
-    projectImage: HappyLungs,
+    projectImages: [HappyLungs1, HappyLungs2, HappyLungs3, HappyLungs4, HappyLungs5],
     projectLink: null,
   },
   {
@@ -44,7 +56,7 @@ export const projectData: ProjectItemData[] = [
     description:
       "Mobile app for individuals to manage their medication schedules efficiently through personalised reminders for their medication needs.",
     techStack: [ReactIcon, TypescriptIcon, JavascriptIcon, FirebaseIcon],
-    projectImage: MedAlert,
+    projectImages: [MedAlert1, MedAlert2, MedAlert3, MedAlert4, MedAlert5, MedAlert6],
     projectLink: "https://github.com/Jajared/MedAlert",
   },
   {
@@ -53,7 +65,7 @@ export const projectData: ProjectItemData[] = [
     description:
       "Simple personal finance app to manage and monitor spending and investment activities in one app.",
     techStack: [FlutterIcon, FirebaseIcon],
-    projectImage: FinanceTracker,
+    projectImages: [Finance1, Finance2, Finance3, Finance4],
     projectLink: "https://github.com/Jajared/FinanceTracker",
   },
   {
@@ -62,7 +74,7 @@ export const projectData: ProjectItemData[] = [
     description:
       "First ventured into web development by designing a business website. Connectlab Pte. Ltd. is a Singapore-based SME that specialises in the distribution of cabling products.",
     techStack: [],
-    projectImage: Connectlab,
+    projectImages: [Connectlab],
     projectLink: "https://www.connectlab.com.sg/",
   },
   {
@@ -71,7 +83,7 @@ export const projectData: ProjectItemData[] = [
     description:
       "Training Management Bot:\nAutomating attendance tracking for efficient training data management.\n\nModFriend:\nFind mutual free time slots within your friends' timetables.",
     techStack: [PythonIcon],
-    projectImage: paradeStateBot,
+    projectImages: [paradeStateBot],
     projectLink: null,
   },
 ];
