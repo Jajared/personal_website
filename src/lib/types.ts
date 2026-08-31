@@ -29,9 +29,16 @@ export interface ProjectItemData {
   projectLink: string | null;
 }
 
-export type SkillType = "Frontend" | "Backend" | "Languages" | "Tools" | "AI/ML";
+export type SkillType = "Frontend" | "Backend" | "Languages" | "Cloud" | "Tools" | "AI/ML";
 
-export const SkillTypes: SkillType[] = ["Frontend", "Backend", "AI/ML", "Languages", "Tools"];
+export const SkillTypes: SkillType[] = [
+  "Frontend",
+  "Backend",
+  "AI/ML",
+  "Languages",
+  "Cloud",
+  "Tools",
+];
 
 export interface SkillsItemData {
   name: string;

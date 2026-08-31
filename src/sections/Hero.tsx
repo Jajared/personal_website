@@ -6,7 +6,7 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { cn } from "@/lib/cn";
 import { siteConfig } from "@/lib/siteConfig";
 
-type Mode = "overview" | "dev";
+type Mode = "standard" | "dev";
 
 function ModeButton({
   active,
@@ -33,14 +33,14 @@ function ModeButton({
 }
 
 export function Hero() {
-  const [selectedMode, setSelectedMode] = useState<Mode>("overview");
+  const [selectedMode, setSelectedMode] = useState<Mode>("standard");
 
   // Dev mode (the interactive terminal) is a desktop experience — typing
   // commands on a phone is awkward — so it's disabled below the same `md`
   // breakpoint the nav switches at. On smaller screens we always show the
-  // overview, and the mode toggle is hidden entirely.
+  // standard view, and the mode toggle is hidden entirely.
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  const mode: Mode = isDesktop ? selectedMode : "overview";
+  const mode: Mode = isDesktop ? selectedMode : "standard";
 
   return (
     <section id="top" className="relative flex min-h-svh flex-col overflow-hidden">
@@ -49,8 +49,8 @@ export function Hero() {
       <Container className="relative flex flex-1 flex-col pt-28 pb-16">
         <div className="animate-rise mb-12 hidden md:block" style={{ animationDelay: "0ms" }}>
           <div className="inline-flex items-center gap-1 rounded-full border border-line bg-surface/60 p-1 backdrop-blur-sm">
-            <ModeButton active={mode === "overview"} onClick={() => setSelectedMode("overview")}>
-              Overview
+            <ModeButton active={mode === "standard"} onClick={() => setSelectedMode("standard")}>
+              Standard
             </ModeButton>
             <ModeButton active={mode === "dev"} onClick={() => setSelectedMode("dev")}>
               <span className="font-mono">{">_"}</span> Dev mode
@@ -59,8 +59,8 @@ export function Hero() {
         </div>
 
         <div className="flex flex-1 flex-col justify-center">
-          {mode === "overview" ? (
-            <div key="overview">
+          {mode === "standard" ? (
+            <div key="standard">
               <p
                 className="animate-rise flex items-center gap-2 font-mono text-sm text-muted"
                 style={{ animationDelay: "60ms" }}
@@ -104,10 +104,10 @@ export function Hero() {
             <div key="dev" className="animate-rise">
               <Console
                 heightClassName="h-[clamp(24rem,58svh,40rem)]"
-                onExit={() => setSelectedMode("overview")}
+                onExit={() => setSelectedMode("standard")}
               />
               <p className="mt-3 font-mono text-xs text-faint">
-                Tip: run <span className="text-muted">exit</span> or tap Overview to leave dev mode.
+                Tip: run <span className="text-muted">exit</span> or tap Standard to leave dev mode.
               </p>
             </div>
           )}

@@ -14,7 +14,7 @@ export interface CommandContext {
   print: (node: ReactNode) => void;
   /** Wipe the screen. */
   clear: () => void;
-  /** Present only in dev mode — switches the hero back to the overview. */
+  /** Present only in dev mode — switches the hero back to the standard view. */
   exit?: () => void;
 }
 
@@ -274,10 +274,10 @@ export const commands: Command[] = [
   },
   {
     names: ["exit", "portfolio"],
-    summary: "Back to the overview",
+    summary: "Back to standard view",
     run: ({ print, exit }) => {
       if (!exit) {
-        print(<p className="text-muted">Already in the overview.</p>);
+        print(<p className="text-muted">Already in standard view.</p>);
         return;
       }
       print(<p className="text-muted">Leaving dev mode…</p>);

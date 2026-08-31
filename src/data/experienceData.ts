@@ -1,10 +1,13 @@
 import {
   AwsIcon,
+  AzureIcon,
+  ClaudeIcon,
   CPPIcon,
   DjangoIcon,
   DockerIcon,
   DotNetIcon,
   FirebaseIcon,
+  GcpIcon,
   JavascriptIcon,
   KubernetesIcon,
   LangchainIcon,
@@ -39,18 +42,12 @@ export const experienceData: ExperienceItemData[] = [
       NextJsIcon,
       TypescriptIcon,
       PostgresqlIcon,
-      PrismaIcon,
-      DjangoIcon,
-      PythonIcon,
-      LangchainIcon,
-      AwsIcon,
       KubernetesIcon,
       DockerIcon,
+      GcpIcon,
+      ClaudeIcon
     ],
     highlights: [
-      "Architecting retrieval-augmented pipelines around compact in-house LLMs, cutting inference cost ~60% versus frontier-model baselines while holding answer quality steady.",
-      "Own the evaluation harness — automated regression suites that gate every model and prompt change before it reaches production.",
-      "Partner with research to distill and fine-tune sub-3B models for latency-sensitive and on-device deployments.",
     ],
   },
   {
@@ -61,7 +58,7 @@ export const experienceData: ExperienceItemData[] = [
     startDate: "July 2025",
     endDate: "Dec 2025",
     description: "Simplifying ESG Compliance for SMEs",
-    techStack: [TypescriptIcon, ReactIcon, CPPIcon, DotNetIcon, PostgresqlIcon],
+    techStack: [TypescriptIcon, ReactIcon, CPPIcon, DotNetIcon, PostgresqlIcon, AzureIcon],
     highlights: [
       "Contributed to building the core foundation of Fortifai’s ESG Compliance platform from an early stage.",
       "Pioneered AI integration by developing an end-to-end LLM-powered document processing pipeline using Azure services to automate ESG form filling, reducing manual completion time by 90%.",
@@ -106,7 +103,7 @@ export const experienceData: ExperienceItemData[] = [
     employmentType: "Internship",
     startDate: "May 2024",
     endDate: "Aug 2024",
-    description: "Creating AI-powered tools for personalized DIY trips.",
+    description: "Built a travel planner — for travellers, by travelers",
     techStack: [ReactIcon, TypescriptIcon, MongoDbIcon, LangchainIcon, OpenAIIcon],
     highlights: [
       "Spearheaded an internal data visualisation dashboard to extract actionable business insights, reducing data retrieval time by 90% using aggregate querying.",
@@ -121,7 +118,7 @@ export const experienceData: ExperienceItemData[] = [
     employmentType: "Internship",
     startDate: "Dec 2023",
     endDate: "May 2024",
-    description: "Revolutionizing eye health with mobile-first solutions.",
+    description: "Built VisionPal on the app stores to make eyecare more accessible",
     techStack: [ReactIcon, JavascriptIcon],
     highlights: [
       "Developed key features for an integrated eyecare mobile app across both iOS and Android platforms, achieving top 100 ranking in the App Store’s Health & Fitness category.",
@@ -136,7 +133,7 @@ export const experienceData: ExperienceItemData[] = [
     employmentType: "Part-time",
     startDate: "Aug 2023",
     endDate: "May 2024",
-    description: "Building apps for better health management.",
+    description: "Driving change for the local healthcare scene with tech",
     techStack: [ReactIcon, JavascriptIcon, TypescriptIcon, FirebaseIcon],
     highlights: [
       "Built full-stack health-management apps (React + Firebase) used in a study on chronic-condition self-monitoring.",
