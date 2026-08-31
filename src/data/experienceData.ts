@@ -48,6 +48,10 @@ export const experienceData: ExperienceItemData[] = [
       ClaudeIcon
     ],
     highlights: [
+      "Contributed as the primary engineer behind an agentic low-code platform for citizen developers to build and deploy compliant, production-ready AI applications in hours.",
+      "Optimised the core builder agent orchestration layer, cutting time-to-first-build by 50% and reducing LLM inference costs by 40% while improving generation quality.",
+      "Deployed dedicated sandbox environments for pilot clients, collaborating closely with enterprise users to translate live feedback directly into product roadmap priorities.",
+      "Redesigned the interface around modern agentic workflows, simplifying complex multi-step generation into an intuitive UI for non-technical users."
     ],
   },
   {

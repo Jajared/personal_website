@@ -80,9 +80,8 @@ export function Hero() {
                 className="animate-rise mt-8 max-w-xl text-lg leading-relaxed text-muted"
                 style={{ animationDelay: "240ms" }}
               >
-                I build web and AI products end to end — designing the data model, shipping the API,
-                and sweating the last pixel of the interface. Lately that's meant compact LLMs and
-                full-stack TypeScript.
+                Full-stack Software Engineer with experience shipping 0 -&gt; 1 web
+                platforms, AI integrations, and production-ready APIs at scale.
               </p>
 
               <div className="animate-rise mt-10" style={{ animationDelay: "330ms" }}>

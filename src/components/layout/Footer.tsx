@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="border-t border-line py-8">
       <Container className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <p className="font-mono text-xs text-faint">
-          © {year} {siteConfig.name} — built with React, Vite &amp; Tailwind
+          © {year} {siteConfig.name}
         </p>
         <button
           type="button"

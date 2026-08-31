@@ -43,19 +43,19 @@ export function About() {
           </Reveal>
 
           <Reveal delay={160}>
-            <div className="flex flex-col gap-5 text-lg leading-relaxed text-muted">
+            <div className="flex flex-col gap-6 text-lg leading-relaxed text-muted">
               <p>
-                I'm a Computer Science graduate from the National University of Singapore (NUS),
-                where I specialised in Software Engineering and Database Systems.
+                I'm a Computer Science graduate from the National University of Singapore (NUS) with a 
+                specialisation in Software Engineering.
               </p>
               <p>
-                I like tackling messy, real-world problems and turning them into products people
-                actually use — the kind of work that spans a database migration in the morning and a
-                UI polish pass by evening.
+                Mostly, I just love taking chaotic, real-world problems and turning them into clean software people actually enjoy using.
               </p>
               <p>
-                Across a handful of internships I've shipped full-stack web apps and AI features,
-                and I'm always chasing the next tool or technique worth learning.
+                Having worn plenty of hats across fast-moving startups and enterprise teams, I've built and shipped everything from full-stack platforms to cloud backends and production AI tools.
+              </p>
+              <p>
+                Right now, I'm spending my time experimenting with agentic AI workflows and orchestration, scalable cloud infrastructure, and building things that break (and then fixing them).
               </p>
             </div>
           </Reveal>
