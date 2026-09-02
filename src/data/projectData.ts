@@ -1,4 +1,5 @@
 import {
+  AwsIcon,
   DockerIcon,
   FirebaseIcon,
   FlutterIcon,
@@ -9,6 +10,7 @@ import {
   PythonIcon,
   ReactIcon,
   RedisIcon,
+  TerrarformIcon,
   TypescriptIcon,
 } from "@/components/icons/DevIcons";
 import type { ProjectItemData } from "@/lib/types";
@@ -30,13 +32,26 @@ import MedAlert5 from "./assets/images/MedAlert_5.png";
 import MedAlert6 from "./assets/images/MedAlert_6.png";
 import PeerPrep from "./assets/images/PeerPrep.jpg";
 import paradeStateBot from "./assets/images/ParadeStateBot.png";
+import CyclelinkArchitecture from "./assets/images/Cyclelink_Architecture.png";
+import CyclelinkUserflow from "./assets/images/Cyclelink_Userflow.png";
+import CyclelinkSystemPerformance from "./assets/images/Cyclelink_System_Performance.png";
+import CyclelinkLoadTesting from "./assets/images/Cyclelink_Load_Testing.png";
 
 export const projectData: ProjectItemData[] = [
+  {
+    title: "Cyclelink",
+    year: 2026,
+    description:
+      "Cloud-native cycling recommendation platform deployed on AWS using Terraform for Infrastructure as Code (IaC) and containerisation for scalability.",
+    techStack: [AwsIcon, TerrarformIcon, DockerIcon, RedisIcon, TypescriptIcon, MongoDbIcon],
+    projectImages: [CyclelinkArchitecture, CyclelinkUserflow, CyclelinkSystemPerformance, CyclelinkLoadTesting],
+    projectLink: null,
+  },
   {
     title: "PeerPrep",
     year: 2024,
     description:
-      "PeerPrep is a platform that connects students to practice technical interviews with their peers. It provides a seamless experience for users to schedule, conduct and review mock interviews.",
+      "A collaborative platform that matches students in real time to practice technical interviews with live code editing and peer feedback.",
     techStack: [NextJsIcon, TypescriptIcon, NestJsIcon, MongoDbIcon, RedisIcon, DockerIcon],
     projectImages: [PeerPrep],
     projectLink: null,
