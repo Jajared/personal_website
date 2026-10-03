@@ -44,4 +44,5 @@ export interface SkillsItemData {
   name: string;
   Icon: TechIcon;
   type: SkillType;
+  link?: string;
 }

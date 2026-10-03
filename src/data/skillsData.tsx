@@ -1,5 +1,6 @@
 import {
   AwsIcon,
+  AzureIcon,
   ClaudeIcon,
   CssIcon,
   DjangoIcon,
@@ -56,7 +57,18 @@ export const skillsData: SkillsItemData[] = [
   { name: "Python", Icon: PythonIcon, type: "Languages" },
   { name: "Java", Icon: JavaIcon, type: "Languages" },
   // { name: "Certified Solutions Architect", Icon: AwsIcon, type: "Cloud" },
-  { name: "Certified Cloud Practitioner", Icon: AwsIcon, type: "Cloud" },
+  {
+    name: "Certified Cloud Practitioner",
+    Icon: AwsIcon,
+    type: "Cloud",
+    link: "https://www.credly.com/badges/f586111d-cc83-49cc-95a5-c4f42340e7f4/linked_in_profile",
+  },
+  {
+    name: "Certified Azure Fundamentals",
+    Icon: AzureIcon,
+    type: "Cloud",
+    link: "https://learn.microsoft.com/en-gb/users/jaredwong-2480/credentials/ac12748b5a31f3ca?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+  },
   { name: "Github", Icon: GithubIcon, type: "Tools" },
   { name: "Figma", Icon: FigmaIcon, type: "Tools" },
   { name: "Docker", Icon: DockerIcon, type: "Tools" },
