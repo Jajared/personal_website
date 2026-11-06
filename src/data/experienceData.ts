@@ -35,8 +35,8 @@ export const experienceData: ExperienceItemData[] = [
     company_icon: PintsaiLogo,
     role: "AI Engineer",
     employmentType: "Full-time",
-    startDate: "July 2026",
-    endDate: "Present",
+    startDate: "Jul 2026",
+    endDate: "Nov 2026",
     description: "Building and owning 0->1 AI-augmented fintech systems",
     techStack: [
       NextJsIcon,
@@ -48,9 +48,12 @@ export const experienceData: ExperienceItemData[] = [
       ClaudeIcon
     ],
     highlights: [
-      "Contributed as the primary engineer behind an agentic low-code platform for citizen developers to build and deploy compliant, production-ready AI applications in hours.",
+      "Primary engineer on Autothought, an agentic low-code platform for citizen developers to build and deploy compliant, production-ready AI applications in hours.",
       "Optimised the core builder agent orchestration layer, cutting time-to-first-build by 50% and reducing LLM inference costs by 40% while improving generation quality.",
+      "Built agent studio, an evaluation and governance module for enterprise AI agents using LLM-as-a-judge evaluation techniques, guardrails, per-agent tool permissions and an interactive agent playground.",
+      "Built the deployment infrastructure and CI/CD pipeline, introducing zero-downtime blue/green deployments for the fleet of generated apps.",
       "Deployed dedicated sandbox environments for pilot clients, collaborating closely with enterprise users to translate live feedback directly into product roadmap priorities.",
+      "Shipped enterprise features end to end, including a publish-and-review pipeline with reviewer sign-off and release gates, and third-party integrations via Composio and custom APIs.",
       "Redesigned the interface around modern agentic workflows, simplifying complex multi-step generation into an intuitive UI for non-technical users."
     ],
   },
@@ -59,7 +62,7 @@ export const experienceData: ExperienceItemData[] = [
     company_icon: FortifaiLogo,
     role: "Software Engineer",
     employmentType: "Internship",
-    startDate: "July 2025",
+    startDate: "Jul 2025",
     endDate: "Dec 2025",
     description: "Simplifying ESG Compliance for SMEs",
     techStack: [TypescriptIcon, ReactIcon, CPPIcon, DotNetIcon, PostgresqlIcon, AzureIcon],
